@@ -15,11 +15,12 @@
 
         <activity
             android:name=".main.MainActivity"
-            android:exported="false">
+            android:exported="true">
             <intent-filter>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <!--没有启动默认的activity edit configurations 删除配置 再重新配置一个即可运行-->
             </intent-filter>
         </activity>
 
