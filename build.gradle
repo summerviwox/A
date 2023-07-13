@@ -1,8 +1,17 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+/**
+ * Top-level build file where you can add configuration options common to all sub-projects/modules.
+ * 定义好才能在sub-projects/modules使用
+ * apply false 表示总不应用到所有工程  sub-projects/modules可以单独使用
+ */
 plugins {
+    //‘com.android.application’ 插件用于构建 Android 应用程序项目，生成可安装的 APK 文件
     id 'com.android.application' version '7.3.1' apply false
+    //‘com.android.library’ 插件用于构建可重用的 Android 库项目，供其他应用程序项目使用
     id 'com.android.library' version '7.3.1' apply false
+    /**
+     * ‘kotlin-android’ 插件是用于在 Android 项目中使用 Kotlin 编程语言的插件
+     * Duplicate class kotlin.collections.jdk8.CollectionsJDK8Kt found in modules kotlin-stdlib-1.8.10 (org.jetbrains.kotlin:kotlin-stdlib:1.8.10) and kotlin-stdlib-jdk8-1.7.20 (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20)
+     * 1.7.20→1.8.10
+     */
     id 'org.jetbrains.kotlin.android' version '1.8.10' apply false
-    //Duplicate class kotlin.collections.jdk8.CollectionsJDK8Kt found in modules kotlin-stdlib-1.8.10 (org.jetbrains.kotlin:kotlin-stdlib:1.8.10) and kotlin-stdlib-jdk8-1.7.20 (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20)
-    //1.7.20→1.8.10
 }

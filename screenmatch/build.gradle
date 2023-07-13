@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.summer.a.module'
+    namespace 'com.summer.a.screenmatch'
     compileSdk 33
 
     defaultConfig {
@@ -31,5 +31,5 @@ android {
 }
 
 dependencies {
-    api project(':lib')
+
 }

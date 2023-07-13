@@ -1,14 +1,16 @@
-package com.summer.a.main
+package com.summer.a.app
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import androidx.fragment.app.FragmentActivity
-import com.summer.a.R
+import com.summer.a.app.R
 
 class MainActivity:FragmentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
+
     }
+
+
 }

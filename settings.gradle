@@ -16,3 +16,4 @@ rootProject.name = "A"
 include ':app'
 include ':lib'
 include ':module'
+include ':screenmatch'
