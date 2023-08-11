@@ -1,8 +1,13 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
-
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
 android {
     namespace 'com.summer.a.module'
     compileSdk 33
@@ -31,5 +36,8 @@ android {
 }
 
 dependencies {
-    api project(':lib')
+    implementation project(':lib')
+    implementation project(':view')
+    kapt 'com.google.auto.service:auto-service:1.1.1'
+    kapt 'com.alibaba:arouter-compiler:1.5.2'
 }

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/sw_30dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sw_400dp"
+        android:hint="@string/login_phone_hint"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/login_code_hint"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <com.summer.a.view.round.RoundTextView
+        android:id="@+id/roundTextView"
+        app:rRadius="@dimen/sw_10dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sw_60dp"
+        android:hint="@string/login_confirm"
+        android:text="@string/login_confirm"
+        android:background="@color/color_786d5f"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/code" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

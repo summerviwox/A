@@ -6,11 +6,31 @@
 
 
     <TextView
+        android:id="@+id/a"
         android:background="@color/black"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/sw_720dp"
         android:layout_height="wrap_content"/>
 
+    <View
+        android:id="@+id/b"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/a"
+        android:layout_marginTop="@dimen/sw_100dp"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sw_1dp"/>
+
+
+
+    <View
+        android:id="@+id/c"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b"
+        android:layout_marginTop="@dimen/sw_100dp"
+        android:background="@color/color_78c7c7"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sw_100dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

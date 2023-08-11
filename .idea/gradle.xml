@@ -13,8 +13,11 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/lib" />
+            <option value="$PROJECT_DIR$/login" />
             <option value="$PROJECT_DIR$/module" />
+            <option value="$PROJECT_DIR$/provider" />
             <option value="$PROJECT_DIR$/screenmatch" />
+            <option value="$PROJECT_DIR$/view" />
           </set>
         </option>
       </GradleProjectSettings>
