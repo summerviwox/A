@@ -31,10 +31,10 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "A"
-//include ':app'
-//include ':lib'
-//include ':module'
-//include ':screenmatch'
-//include ':login'
-//include ':view'
+include ':app'
+include ':lib'
+include ':module'
+include ':screenmatch'
+include ':login'
+include ':view'
 include ':provider'
