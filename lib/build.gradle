@@ -51,8 +51,7 @@ dependencies {
     // https://mvnrepository.com/artifact/com.google.auto.service/auto-service
     api 'com.google.auto.service:auto-service:1.1.1'
     kapt 'com.google.auto.service:auto-service:1.1.1'
-    api project(':provider')
-    kapt project(':provider')
+    api 'com.github.summerviwox:A:Tag'
     //there‘s no route matched 如果都按照教程配置还是报错 卸载重装
     api  'com.alibaba:arouter-api:1.5.2'
     kapt 'com.alibaba:arouter-compiler:1.5.2'

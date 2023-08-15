@@ -29,18 +29,18 @@ class ProviderProcessor: AbstractProcessor() {
 
     override fun process(mutableSet: MutableSet<out TypeElement>?, roundEnvironment: RoundEnvironment?): Boolean {
         println("1111111111111111111111")
-        mutableSet?.forEach {
-            set->
-            var element = roundEnvironment?.getElementsAnnotatedWith(set)
-
-        }
-        var set = roundEnvironment?.getElementsAnnotatedWith(ProviderAnno::class.java)
-        set?.forEach {
-            var TypeElement = it as TypeElement
-            var c = Class.forName(TypeElement.qualifiedName.toString())
-            var o = c.getDeclaredConstructor().newInstance()
-
-        }
+//        mutableSet?.forEach {
+//            set->
+//            var element = roundEnvironment?.getElementsAnnotatedWith(set)
+//
+//        }
+//        var set = roundEnvironment?.getElementsAnnotatedWith(ProviderAnno::class.java)
+//        set?.forEach {
+//            var TypeElement = it as TypeElement
+//            var c = Class.forName(TypeElement.qualifiedName.toString())
+//            var o = c.getDeclaredConstructor().newInstance()
+//
+//        }
         return true
     }
 }
