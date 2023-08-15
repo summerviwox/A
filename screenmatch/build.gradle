@@ -2,7 +2,9 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
 }
-
+kotlin {
+    jvmToolchain(11)
+}
 android {
     namespace 'com.summer.a.screenmatch'
     compileSdk 33

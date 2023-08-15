@@ -8,6 +8,9 @@ kapt {
         arg("AROUTER_MODULE_NAME", project.getName())
     }
 }
+kotlin {
+    jvmToolchain(11)
+}
 android {
     namespace 'com.summer.a.login'
     compileSdk 33
