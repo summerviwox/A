@@ -13,6 +13,16 @@ pluginManagement {
             }
         }
     }
+
+    resolutionStrategy {
+        eachPlugin {
+            println(it.requested)
+            //println(requested.id+"#"+requested.module+"#"+requested.version)
+            if (requested.id == "org.jetbrains.kotlin.android") {
+                useModule("org.jetbrains.kotlin.android:1.8.10")
+            }
+        }
+    }
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
