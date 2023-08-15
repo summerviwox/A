@@ -16,12 +16,6 @@
 //                    map.put(that,it)
 //                }
 //            }
-//            ServiceLoader.load(Any::class.java).forEach {
-//                it.javaClass.interfaces?.forEach {
-//                    that->
-//                    map.put(that,it)
-//                }
-//            }
 //        }
 //        fun <T> getProvider(t:Class<T>):T?{
 //            return map[t] as? T

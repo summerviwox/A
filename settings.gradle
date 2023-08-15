@@ -3,6 +3,14 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
+        maven {
+            allowInsecureProtocol = true
+            url   "https://www.summerviwox.com:8443/repository/X/"
+            credentials {
+                username =  "admin"
+                password = "canVAS700217#"
+            }
+        }
     }
 }
 dependencyResolutionManagement {
@@ -10,6 +18,14 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            allowInsecureProtocol = true
+            url   "https://www.summerviwox.com:8443/repository/X/"
+            credentials {
+                username =  "admin"
+                password = "canVAS700217#"
+            }
+        }
     }
 }
 rootProject.name = "A"

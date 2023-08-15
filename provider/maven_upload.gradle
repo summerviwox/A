@@ -1,0 +1,83 @@
+apply plugin: 'maven-publish'//gradle 6.3 后maven插件不再能使用 改用maven-publish
+
+def domain= "https://www.summerviwox.com:8443/repository/X/" //存储库名称
+def userName= "admin"//用户名
+def passWord= "canVAS700217#"//密码 记得修改为自己真实的密码
+
+def groupId = "com.summer.a"
+def artifactId = "provider"
+def version = "0.0.1"
+
+
+def RELEASE_REPOSITORY_URL = domain
+def SNAPSHOT_REPOSITORY_URL = domain
+def NEXUS_USERNAME = userName
+def NEXUS_PASSWORD = passWord
+
+
+//解决
+tasks.withType(PublishToMavenRepository) {
+    //System.setProperty("javax.net.ssl.trustStore", "summerviwox.jks")
+    //System.setProperty("javax.net.ssl.trustStore","$projectDir/summerviwox.jks")
+}
+
+//android {
+//    publishing {
+//        singleVariant("release") {
+//            // if you don't want sources/javadoc, remove these lines
+//            withSourcesJar()
+//            withJavadocJar()
+//        }
+//    }
+//}
+
+
+afterEvaluate {
+    publishing {
+        repositories {
+//            maven {
+//                name("ReleaseMaven")
+//                url = RELEASE_REPOSITORY_URL
+//                credentials {
+//                    username = NEXUS_USERNAME
+//                    password = NEXUS_PASSWORD
+//                }
+//            }
+            maven {
+                name("SnapshotMaven")
+                url = SNAPSHOT_REPOSITORY_URL
+                credentials {
+                    username = NEXUS_USERNAME
+                    password = NEXUS_PASSWORD
+                }
+            }
+        }
+        publications {
+//            Production(MavenPublication) {
+//                from components.release
+//                groupId = groupId
+//                artifactId = artifactId
+//                version = version
+//            }
+            Develop(MavenPublication) {
+                //from components.release
+                setGroupId(groupId) //直接赋值不行 会导致groupId赋值失败 查看MavenPublication文件里面没有暴露变量只能getset
+                //groupId = groupId
+                setArtifactId(artifactId)
+                //artifactId = artifactId
+                setVersion("${version}-SNAPSHOT")
+                artifact("$buildDir/libs/provider.jar"){
+                    classifier 'release'
+                    extension 'jar'
+                }
+                  //aar包的目录
+                //version = "${version}-SNAPSHOT"
+            }
+//            create<MavenPublication>(project.name) {
+//                groupId = groupId
+//                artifactId = artifactId
+//                version = "${version}-SNAPSHOT"
+//            }
+        }
+    }
+}
