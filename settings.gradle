@@ -16,7 +16,9 @@ pluginManagement {
 
     resolutionStrategy {
         eachPlugin {
-            println(it.requested)
+            println("#"+requested.id)
+            println("#"+requested.module)
+            println("#"+requested.version)
             //println(requested.id+"#"+requested.module+"#"+requested.version)
             if (requested.id == "org.jetbrains.kotlin.android") {
                 useModule("org.jetbrains.kotlin.android:1.8.10")
