@@ -1,0 +1,33 @@
+// Because the components are created only during the afterEvaluate phase, you must
+// configure your publications using the afterEvaluate() lifecycle method.
+//jetpack No read access to repo
+//github private 改成 public
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                // Applies the component for the release build variant.
+                //Could not get unknown property 'release' for SoftwareComponentInternal set of type org.gradle.api.internal.component.DefaultSoftwareComponentContainer.
+                //注释掉
+                //from components.release
+
+                // You can then customize attributes of the publication as shown below.
+                groupId = 'com.summer.a'
+                artifactId = 'provider'
+                version = '0.0.1'
+            }
+            // Creates a Maven publication called “debug”.
+            debug(MavenPublication) {
+                // Applies the component for the debug build variant.
+                //Could not get unknown property 'debug' for SoftwareComponentInternal set of type org.gradle.api.internal.component.DefaultSoftwareComponentContainer.
+                //注释掉
+                //from components.debug
+
+                groupId = 'com.summer.a'
+                artifactId = 'provider'
+                version = '0.0.1'
+            }
+        }
+    }
+}

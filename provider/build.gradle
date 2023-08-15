@@ -2,9 +2,11 @@ plugins {
     id 'java-library'
     id 'org.jetbrains.kotlin.jvm'
     id 'kotlin-kapt'
+    //Could not find method publishing() for arguments
+    id 'maven-publish'
 }
 
-apply from:"maven_upload.gradle"
+apply from:"maven_jitpack.gradle"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_11
