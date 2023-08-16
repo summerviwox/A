@@ -5,14 +5,6 @@
  */
 //https://kotlinlang.org/docs/gradle-configure-project.html#check-for-jvm-target-compatibility-of-related-compile-tasks
 //gradle7 模板 https://www.cnblogs.com/bg-tab/p/16303565.html
-buildscript {
-    ext {
-        kotlin_version = '1.9.0'
-    }
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0"
-    }
-}
 plugins {
     //‘com.android.application’ 插件用于构建 Android 应用程序项目，生成可安装的 APK 文件
     id 'com.android.application' version '7.3.1' apply false
@@ -40,7 +32,7 @@ plugins {
 
     apply(plugin = "org.jetbrains.kotlin.android")*/
 
-    id 'org.jetbrains.kotlin.android' version '1.9.0' apply false
+    id 'org.jetbrains.kotlin.android' version '1.6.0' apply false
 
 
     /*
@@ -57,7 +49,7 @@ plugins {
     }
     apply plugin: "org.jetbrains.kotlin.jvm"*/
 
-    id 'org.jetbrains.kotlin.jvm' version '1.9.0' apply false
+    id 'org.jetbrains.kotlin.jvm' version '1.6.0' apply false
 
 
 }
