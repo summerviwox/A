@@ -6,18 +6,18 @@ afterEvaluate {
     publishing {
         publications {
             // Creates a Maven publication called "release".
-            release(MavenPublication) {
+            mavenJava(MavenPublication) {
                 // Applies the component for the release build variant.
                 //Could not get unknown property 'release' for SoftwareComponentInternal set of type org.gradle.api.internal.component.DefaultSoftwareComponentContainer.
                 //注释掉
-                //from components.release
+                from components.java
 
                 // You can then customize attributes of the publication as shown below.
                 groupId = 'com.summer.a'
                 artifactId = 'provider'
                 version = '0.0.1'
             }
-            // Creates a Maven publication called “debug”.
+/*            // Creates a Maven publication called “debug”.
             debug(MavenPublication) {
                 // Applies the component for the debug build variant.
                 //Could not get unknown property 'debug' for SoftwareComponentInternal set of type org.gradle.api.internal.component.DefaultSoftwareComponentContainer.
@@ -27,7 +27,7 @@ afterEvaluate {
                 groupId = 'com.summer.a'
                 artifactId = 'provider'
                 version = '0.0.1'
-            }
+            }*/
         }
     }
 }
