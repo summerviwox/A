@@ -4,6 +4,15 @@
  * apply false 表示总不应用到所有工程  sub-projects/modules可以单独使用
  */
 //https://kotlinlang.org/docs/gradle-configure-project.html#check-for-jvm-target-compatibility-of-related-compile-tasks
+//gradle7 模板 https://www.cnblogs.com/bg-tab/p/16303565.html
+buildscript {
+    ext {
+        kotlin_version = '1.9.0'
+    }
+    dependencies {
+
+    }
+}
 plugins {
     //‘com.android.application’ 插件用于构建 Android 应用程序项目，生成可安装的 APK 文件
     id 'com.android.application' version '7.3.1' apply false
