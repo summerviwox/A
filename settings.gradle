@@ -21,7 +21,7 @@ pluginManagement {
             println("#"+requested.version)
             //println(requested.id+"#"+requested.module+"#"+requested.version)
             if (requested.id == "org.jetbrains.kotlin.android") {
-                useModule("org.jetbrains.kotlin.android:1.8.10")
+                //useModule("org.jetbrains.kotlin.android:1.8.10")
             }
         }
     }
