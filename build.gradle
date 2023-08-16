@@ -3,6 +3,7 @@
  * 定义好才能在sub-projects/modules使用
  * apply false 表示总不应用到所有工程  sub-projects/modules可以单独使用
  */
+//https://kotlinlang.org/docs/gradle-configure-project.html#check-for-jvm-target-compatibility-of-related-compile-tasks
 plugins {
     //‘com.android.application’ 插件用于构建 Android 应用程序项目，生成可安装的 APK 文件
     id 'com.android.application' version '7.3.1' apply false
@@ -14,7 +15,41 @@ plugins {
      * 1.7.20→1.8.10
      */
     //https://plugins.gradle.org/plugin/org.jetbrains.kotlin.android
+
+   /*
+   相当于下面 注释为过时方法
+   buildscript {
+        repositories {
+            maven {
+                url = uri("https://plugins.gradle.org/m2/")
+            }
+        }
+        dependencies {
+            classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0")
+        }
+    }
+
+    apply(plugin = "org.jetbrains.kotlin.android")*/
+
     id 'org.jetbrains.kotlin.android' version '1.9.0' apply false
+
+
+    /*
+    相当于下面 注释为过时方法
+    buildscript {
+        repositories {
+            maven {
+                url "https://plugins.gradle.org/m2/"
+            }
+        }
+        dependencies {
+            classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0"
+        }
+    }
+    apply plugin: "org.jetbrains.kotlin.jvm"*/
+
     id 'org.jetbrains.kotlin.jvm' version '1.9.0' apply false
+
+
 }
 
