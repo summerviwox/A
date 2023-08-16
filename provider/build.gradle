@@ -1,3 +1,8 @@
+buildscript {
+    ext {
+        kotlin_version = '1.9.0'
+    }
+}
 plugins {
     id 'java-library'
     id 'org.jetbrains.kotlin.jvm'
