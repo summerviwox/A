@@ -1,5 +1,4 @@
 pluginManagement {
-    ext.kotlin_version = '1.9.0'
     repositories {
         gradlePluginPortal()
         google()
