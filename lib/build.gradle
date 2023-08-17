@@ -37,7 +37,6 @@ android {
         jvmTarget = '11'
     }
 
-    kotlin
     //可以调整文件目录结构
     //sourceSets
 
