@@ -9,12 +9,13 @@ plugins {
 apply from:"maven_jitpack.gradle"
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
+//' task ( 11) and 'compileKotlin' task (1.8) jvm target compatibility to the same Java version in build.gradle.kts?
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
 }
 
@@ -22,4 +23,5 @@ dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
     api 'com.google.auto.service:auto-service:1.1.1'
     kapt 'com.google.auto.service:auto-service:1.1.1'
+    implementation  'com.alibaba:arouter-api:1.5.2'
 }

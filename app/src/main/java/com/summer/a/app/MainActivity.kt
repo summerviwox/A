@@ -20,6 +20,7 @@ class MainActivity:FragmentActivity() {
             //ProviderManager.getProvider(LoginProvider::class.java)?.login("name","code")
         }
         //startActivity(Intent(this,LoginActivity::class.java))
+
     }
 
 

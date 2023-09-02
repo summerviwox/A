@@ -27,12 +27,20 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '11'
+        jvmTarget = '17'
     }
+    kotlin {
+        jvmToolchain(17)
+    }
+
+    buildFeatures{
+        viewBinding = true
+    }
+
 }
 
 dependencies {
@@ -40,4 +48,5 @@ dependencies {
     implementation project(':view')
     kapt 'com.google.auto.service:auto-service:1.1.1'
     kapt 'com.alibaba:arouter-compiler:1.5.2'
+    //kapt project(':provider')
 }

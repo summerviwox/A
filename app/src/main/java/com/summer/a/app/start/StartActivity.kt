@@ -2,8 +2,6 @@ package com.summer.a.app.start
 
 import android.os.Bundle
 import com.summer.a.lib.activity.BaseActivity
-import com.summer.a.lib.provider.ProviderManager
-import com.summer.a.lib.provider.RouterProvider
 
 class StartActivity: BaseActivity() {
 
@@ -14,6 +12,6 @@ class StartActivity: BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(startView)
-        ProviderManager.getProvider(RouterProvider::class.java)?.intent("/test/MainActivity")
+        //ProviderManager.getProvider(RouterProvider::class.java)?.intent(RouterPath._test_MainActivity)
     }
 }
