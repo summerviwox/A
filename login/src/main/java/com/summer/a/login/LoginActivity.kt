@@ -4,7 +4,9 @@ import android.os.Bundle
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.summer.a.lib.activity.BaseActivity
 import com.summer.a.login.databinding.LoginActivityBinding
-//@Route(path = "/login/LoginActivity")
+import com.summer.a.provider.RouteAnno
+
+@RouteAnno("LoginActivity")
 class LoginActivity: BaseActivity() {
 
     private val loginActivityBinding by lazy {

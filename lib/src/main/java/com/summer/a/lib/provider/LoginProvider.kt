@@ -1,6 +1,8 @@
 package com.summer.a.lib.provider
 
+import android.content.Context
+
 interface LoginProvider {
 
-    fun login(name:String,code:String);
+    fun login(context: Context,name:String,code:String);
 }

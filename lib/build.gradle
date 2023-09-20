@@ -59,9 +59,6 @@ dependencies {
     kapt 'com.google.auto.service:auto-service:1.1.1'
     api project(':provider')
     //kapt project(':provider')
-    //there‘s no route matched 如果都按照教程配置还是报错 卸载重装
-    api  'com.alibaba:arouter-api:1.5.2'
-    kapt 'com.alibaba:arouter-compiler:1.5.2'
     //测试库
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

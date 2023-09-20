@@ -18,6 +18,7 @@
             <option value="$PROJECT_DIR$/provider" />
             <option value="$PROJECT_DIR$/screenmatch" />
             <option value="$PROJECT_DIR$/view" />
+            <option value="$PROJECT_DIR$/web" />
           </set>
         </option>
       </GradleProjectSettings>

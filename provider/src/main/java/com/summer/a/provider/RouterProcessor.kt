@@ -21,7 +21,7 @@ class RouterProcessor: AbstractProcessor() {
     }
 
     override fun getSupportedAnnotationTypes(): MutableSet<String> {
-        var set = mutableSetOf(Route::class.java.canonicalName)
+        var set = mutableSetOf(RouteAnno::class.java.canonicalName)
         return set
     }
 
@@ -39,10 +39,10 @@ class RouterProcessor: AbstractProcessor() {
                 if(it.kind!= ElementKind.CLASS){
                     return@forEach
                 }
-                var route:Route = it.getAnnotation(Route::class.java)
+                var route:RouteAnno = it.getAnnotation(RouteAnno::class.java)
                 var value: String? = null
                 try {
-                    value = route.path.toString()
+                    value = route.value.toString()
                 } catch (e: MirroredTypeException) {
                     //Attempt to access Class object for TypeMirror 获取不到providerAnno.value就trycatch这样处理
                     value = e.typeMirror.toString()
@@ -69,7 +69,7 @@ class RouterProcessor: AbstractProcessor() {
             writer?.apply {
                 writer.write("package com.summer.a.router\n")
                 writer.write("import kotlin.reflect.KClass\n")
-                writer.write("class TestA {\n")
+                writer.write("class RouterProvider {\n")
                 writer.write("    companion object{\n")
                 writer.write("var mutableMap = mutableMapOf<String, KClass<*>>()\n")
                 writer.write("init {\n")
@@ -80,7 +80,7 @@ class RouterProcessor: AbstractProcessor() {
 
                 writer.write("}\n")
                 writer.write("fun getClass(path:String):KClass<*>?{\n")
-                writer.write("return TestA.mutableMap[path]\n")
+                writer.write("return RouterProvider.mutableMap[path]\n")
                 writer.write("}\n")
                 writer.write("}\n")
                 writer.write("}\n")

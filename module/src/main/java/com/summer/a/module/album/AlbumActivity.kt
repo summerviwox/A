@@ -3,8 +3,9 @@ package com.summer.a.module.album
 import android.os.Bundle
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.summer.a.lib.activity.BaseActivity
+import com.summer.a.provider.RouteAnno
 
-@Route(path = "/Album/Album")
+@RouteAnno("AlbumActivity")
 class AlbumActivity:BaseActivity(){
 
     private val albumView by lazy {
