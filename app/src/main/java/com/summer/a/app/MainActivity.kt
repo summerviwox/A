@@ -2,14 +2,13 @@ package com.summer.a.app
 
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
-import com.alibaba.android.arouter.facade.annotation.Route
 import com.summer.a.app.databinding.MainActivityBinding
 import com.summer.a.lib.provider.LoginProvider
 import com.summer.a.lib.provider.ProviderManager
 import com.summer.a.provider.RouteAnno
 import com.summer.a.web.socket.SocketHelper
 
-@RouteAnno("MainActivity")
+//@RouteAnno("MainActivity")
 class MainActivity:FragmentActivity() {
 
     private val mainActivityBinding: MainActivityBinding by lazy {

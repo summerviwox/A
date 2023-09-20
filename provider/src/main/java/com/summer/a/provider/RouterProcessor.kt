@@ -1,6 +1,5 @@
 package com.summer.a.provider
 
-import com.alibaba.android.arouter.facade.annotation.Route
 import com.google.auto.service.AutoService
 import javax.annotation.processing.*
 import javax.lang.model.SourceVersion
