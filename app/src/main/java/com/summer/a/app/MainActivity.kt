@@ -19,7 +19,7 @@ class MainActivity:FragmentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(mainActivityBinding.root)
         mainActivityBinding.c.setOnClickListener {
-            ProviderManager.getProvider(LoginProvider::class.java)?.login(this,"LoginActivity","code")
+            ProviderManager.getProvider(LoginProvider::class.java)?.login(this,"CustomWebActivity","code")
         }
         //startActivity(Intent(this,LoginActivity::class.java))
 
