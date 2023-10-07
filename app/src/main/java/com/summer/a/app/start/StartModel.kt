@@ -7,10 +7,10 @@ import android.os.Handler
 
 class StartModel {
 
-    fun jump(context: Context,clazz: Class<out Activity>){
+    fun jump(context: Context, clazz: Class<out Activity>) {
         Handler().postDelayed({
-            context.startActivity(Intent(context,clazz))
-        },3000)
+            context.startActivity(Intent(context, clazz))
+        }, 3000)
     }
 
 }

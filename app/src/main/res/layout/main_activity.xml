@@ -11,7 +11,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="@dimen/sw_720dp"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <View
         android:id="@+id/b"
@@ -20,17 +20,16 @@
         android:layout_marginTop="@dimen/sw_100dp"
         android:background="@color/black"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/sw_1dp"/>
+        android:layout_height="@dimen/sw_1dp" />
 
 
-
-    <View
+    <TextView
         android:id="@+id/c"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/b"
         android:layout_marginTop="@dimen/sw_100dp"
         android:background="@color/color_78c7c7"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/sw_100dp"/>
+        android:layout_height="@dimen/sw_100dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+plugins {
+    id 'java-library'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.google.auto.service:auto-service:1.1.1'
+    //annotationProcessor 'com.google.auto.service:auto-service:1.1.1'
+    implementation 'com.squareup:javapoet:1.13.0'
+}

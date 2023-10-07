@@ -6,7 +6,7 @@ import com.summer.a.login.databinding.LoginActivityBinding
 import com.summer.a.provider.RouteAnno
 
 @RouteAnno("LoginActivity")
-class LoginActivity: BaseActivity() {
+class LoginActivity : BaseActivity() {
 
     private val loginActivityBinding by lazy {
         LoginActivityBinding.inflate(layoutInflater)

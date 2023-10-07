@@ -7,7 +7,7 @@
 //gradle7 模板 https://www.cnblogs.com/bg-tab/p/16303565.html
 buildscript {
     //kotlin library {0} was compiled with a newer kotlin compiler  kotlin_version 版本和kotlin插件不一致
-    ext{
+    ext {
         kotlin_version = '1.8.0'
     }
 }
@@ -25,20 +25,20 @@ plugins {
      */
     //https://plugins.gradle.org/plugin/org.jetbrains.kotlin.android
 
-   /*
-   相当于下面 注释为过时方法
-   buildscript {
-        repositories {
-            maven {
-                url = uri("https://plugins.gradle.org/m2/")
-            }
-        }
-        dependencies {
-            classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0")
-        }
-    }
+    /*
+    相当于下面 注释为过时方法
+    buildscript {
+         repositories {
+             maven {
+                 url = uri("https://plugins.gradle.org/m2/")
+             }
+         }
+         dependencies {
+             classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0")
+         }
+     }
 
-    apply(plugin = "org.jetbrains.kotlin.android")*/
+     apply(plugin = "org.jetbrains.kotlin.android")*/
 
     id 'org.jetbrains.kotlin.android' version '1.8.0' apply false
 

@@ -6,16 +6,16 @@ plugins {
     id 'maven-publish'
 }
 
-apply from:"maven_jitpack.gradle"
+apply from: "maven_jitpack.gradle"
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
 }
 //' task ( 11) and 'compileKotlin' task (1.8) jvm target compatibility to the same Java version in build.gradle.kts?
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
     kotlinOptions {
-        jvmTarget = "17"
+        jvmTarget = "11"
     }
 }
 
@@ -23,4 +23,5 @@ dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
     api 'com.google.auto.service:auto-service:1.1.1'
     kapt 'com.google.auto.service:auto-service:1.1.1'
+    implementation 'com.squareup:javapoet:1.13.0'
 }

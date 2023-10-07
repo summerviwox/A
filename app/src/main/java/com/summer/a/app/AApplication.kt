@@ -2,7 +2,7 @@ package com.summer.a.app
 
 import android.app.Application
 
-class AApplication: Application() {
+class AApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()

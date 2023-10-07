@@ -6,9 +6,9 @@ pluginManagement {
         maven { url "https://jitpack.io" }
         maven {
             allowInsecureProtocol = true
-            url   "https://www.summerviwox.com:8443/repository/X/"
+            url "https://www.summerviwox.com:8443/repository/X/"
             credentials {
-                username =  "admin"
+                username = "admin"
                 password = "canVAS700217#"
             }
         }
@@ -16,9 +16,9 @@ pluginManagement {
 
     resolutionStrategy {
         eachPlugin {
-            println("#"+requested.id)
-            println("#"+requested.module)
-            println("#"+requested.version)
+            println("#" + requested.id)
+            println("#" + requested.module)
+            println("#" + requested.version)
             //println(requested.id+"#"+requested.module+"#"+requested.version)
             if (requested.id == "org.jetbrains.kotlin.android") {
                 //useModule("org.jetbrains.kotlin.android:1.8.10")
@@ -34,9 +34,9 @@ dependencyResolutionManagement {
         maven { url "https://jitpack.io" }
         maven {
             allowInsecureProtocol = true
-            url   "https://www.summerviwox.com:8443/repository/X/"
+            url "https://www.summerviwox.com:8443/repository/X/"
             credentials {
-                username =  "admin"
+                username = "admin"
                 password = "canVAS700217#"
             }
         }
@@ -51,3 +51,4 @@ include ':login'
 include ':view'
 include ':provider'
 include ':web'
+include ':lib2'

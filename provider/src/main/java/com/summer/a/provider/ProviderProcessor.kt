@@ -4,23 +4,20 @@ import com.google.auto.service.AutoService
 import java.util.*
 import javax.annotation.processing.*
 import javax.lang.model.SourceVersion
-import javax.lang.model.element.Element
 import javax.lang.model.element.ElementKind
 import javax.lang.model.element.TypeElement
 import javax.lang.model.type.MirroredTypeException
-import javax.lang.model.type.TypeMirror
 import javax.tools.FileObject
 import javax.tools.StandardLocation
-import kotlin.collections.ArrayList
 
 /**
  * 断点进不去就删掉build
  */
 @AutoService(Processor::class)
 
-class ProviderProcessor: AbstractProcessor() {
+class ProviderProcessor : AbstractProcessor() {
 
-    var filer:Filer? = null
+    var filer: Filer? = null
 
     override fun init(processingEnv: ProcessingEnvironment?) {
         super.init(processingEnv)
@@ -36,16 +33,18 @@ class ProviderProcessor: AbstractProcessor() {
         return super.getSupportedSourceVersion()
     }
 
-    override fun process(mutableSet: MutableSet<out TypeElement>?, roundEnvironment: RoundEnvironment?): Boolean {
-        var list:MutableList<MutableMap<String,String>> = mutableListOf()
-        mutableSet?.forEach {
-                set->
+    override fun process(
+        mutableSet: MutableSet<out TypeElement>?,
+        roundEnvironment: RoundEnvironment?
+    ): Boolean {
+        var list: MutableList<MutableMap<String, String>> = mutableListOf()
+        mutableSet?.forEach { set ->
             var element = roundEnvironment?.getElementsAnnotatedWith(set)
             element?.forEach {
-                if(it.kind!=ElementKind.CLASS){
+                if (it.kind != ElementKind.CLASS) {
                     return@forEach
                 }
-                var providerAnno:ProviderAnno = it.getAnnotation(ProviderAnno::class.java)
+                var providerAnno: ProviderAnno = it.getAnnotation(ProviderAnno::class.java)
                 var value: String? = null
                 try {
                     value = providerAnno.value.toString()
@@ -63,12 +62,16 @@ class ProviderProcessor: AbstractProcessor() {
         return true
     }
 
-    fun generatorClass(list:MutableList<MutableMap<String,String>>){
+    fun generatorClass(list: MutableList<MutableMap<String, String>>) {
 
-        var file: FileObject? =null
+        var file: FileObject? = null
         try {
             //createSourceFile 会创建ProviderManager.kt.java 用createResource
-            file = filer?.createResource(StandardLocation.SOURCE_OUTPUT,"","com.summer.a.provider.ProviderManager.kt")
+            file = filer?.createResource(
+                StandardLocation.SOURCE_OUTPUT,
+                "",
+                "com.summer.a.provider.ProviderManager.kt"
+            )
             var writer = file?.openWriter()
             writer?.apply {
                 writer.write("package com.summer.a.lib.provider\n")

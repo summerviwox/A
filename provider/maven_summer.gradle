@@ -1,8 +1,8 @@
 apply plugin: 'maven-publish'//gradle 6.3 后maven插件不再能使用 改用maven-publish
 
-def domain= "https://www.summerviwox.com:8443/repository/X/" //存储库名称
-def userName= "admin"//用户名
-def passWord= "canVAS700217#"//密码 记得修改为自己真实的密码
+def domain = "https://www.summerviwox.com:8443/repository/X/" //存储库名称
+def userName = "admin"//用户名
+def passWord = "canVAS700217#"//密码 记得修改为自己真实的密码
 
 def groupId = "com.summer.a"
 def artifactId = "provider"
@@ -66,11 +66,11 @@ afterEvaluate {
                 setArtifactId(artifactId)
                 //artifactId = artifactId
                 setVersion("${version}-SNAPSHOT")
-                artifact("$buildDir/libs/provider.jar"){
+                artifact("$buildDir/libs/provider.jar") {
                     classifier 'release'
                     extension 'jar'
                 }
-                  //aar包的目录
+                //aar包的目录
                 //version = "${version}-SNAPSHOT"
             }
 //            create<MavenPublication>(project.name) {

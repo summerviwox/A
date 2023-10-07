@@ -3,34 +3,9 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
 }
+
 android {
     namespace 'com.summer.a.view'
-    compileSdk 33
-
-    defaultConfig {
-        minSdk 21
-        targetSdk 33
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
-    }
-    kotlinOptions {
-        jvmTarget = '17'
-    }
-    kotlin {
-        jvmToolchain(17)
-    }
     sourceSets {
         main{
             java.srcDirs=[
@@ -39,11 +14,13 @@ android {
             res.srcDirs=[
                     'src/main/res',
                     'src/main/res/main',
-                    'src/main/res/round'
+                    'src/main/res/round',
+                    'src/main/res/skeleton'
             ]
         }
     }
 }
+apply from:rootProject.file('common.gradle')
 
 dependencies {
     implementation project(':lib')

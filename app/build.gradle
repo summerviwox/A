@@ -3,47 +3,12 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
 }
-kapt {
-    arguments {
-        arg("AROUTER_MODULE_NAME", project.getName())
-    }
-}
 android {
     namespace 'com.summer.a.app'
-    compileSdk 33
-
     defaultConfig {
         applicationId "com.summer.a.app"
-        minSdk 21
-        targetSdk 32
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-        debug{
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
-    }
-    kotlinOptions {
-        jvmTarget = '17'
-    }
-    kotlin {
-        jvmToolchain(17)
-    }
-    //xml试图绑定
-    buildFeatures {
-        viewBinding = true
     }
     sourceSets {
         main{
@@ -58,11 +23,17 @@ android {
     }
 }
 
+//Could not find method android() for arguments [build_dja8gyelacasrufo26vqv4zec$_run_closure1@137920cc] on project ':view' of type org.gradle.api.Project
+//plugins {}无法复用 需要在各个module加上
+//其他配置会覆盖添加
+apply from:rootProject.file('common.gradle')
+
 dependencies {
     implementation project(':lib')
     implementation project(':view')
     implementation project(':login')
     implementation project(':web')
     kapt 'com.google.auto.service:auto-service:1.1.1'
-    kapt project(':provider')
+    //kapt project(':provider')
+    implementation 'com.squareup:javapoet:1.13.0'
 }

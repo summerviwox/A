@@ -19,6 +19,6 @@ class CustomWebView @JvmOverloads constructor(
             builtInZoomControls = false
         }
         webChromeClient = WebChromeClient()
-        addJavascriptInterface(JS(),"newSdkInterface")
+        addJavascriptInterface(JS(), "newSdkInterface")
     }
 }

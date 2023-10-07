@@ -9,13 +9,15 @@ import com.summer.a.module.databinding.AlbumActivityBinding
 /**
  * 相册view
  */
-class AlbumView @JvmOverloads constructor(context: Context,
-                                          attrs: AttributeSet? = null,
-                                          defStyleAttr: Int = 0) :ConstraintLayout(context, attrs, defStyleAttr) {
+class AlbumView @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0
+) : ConstraintLayout(context, attrs, defStyleAttr) {
 
-        private val mBinding:AlbumActivityBinding
+    private val mBinding: AlbumActivityBinding
 
     init {
-        mBinding = AlbumActivityBinding.inflate(LayoutInflater.from(context),this,true)
+        mBinding = AlbumActivityBinding.inflate(LayoutInflater.from(context), this, true)
     }
 }
