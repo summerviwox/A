@@ -9,42 +9,77 @@ import android.graphics.Paint
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffXfermode
 import android.graphics.RectF
+import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.view.View
+import android.view.ViewTreeObserver
 import androidx.constraintlayout.helper.widget.Layer
+import com.blankj.utilcode.util.ImageUtils
 import com.blankj.utilcode.util.LogUtils
 import com.summer.a.view.R
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
+/**
+ * gradientDrawable 不连续问题
+ */
 class XfermodeView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
 
     var dstColor = Color.parseColor("#5500ff00")
     var srcColor = Color.parseColor("#55ff0000")
+    var rectColor = Color.parseColor("#FFF8F8F9")
 
-    val srcBitmap:Bitmap by lazy {
+    val srcBitmap: Bitmap by lazy {
         BitmapFactory.decodeResource(resources, R.drawable.src)
 
     }
-    val dstBitmap:Bitmap by lazy {
+    val dstBitmap: Bitmap by lazy {
         BitmapFactory.decodeResource(resources, R.drawable.dst)
     }
 
-    val bgBitmap:Bitmap by lazy {
-        Bitmap.createScaledBitmap(BitmapFactory.decodeResource(resources, R.drawable.bg1),width,800,false)
+    val bgBitmap: Bitmap by lazy {
+        Bitmap.createScaledBitmap(
+            BitmapFactory.decodeResource(resources, R.drawable.bg1), width, 800, false
+        )
     }
 
-    val bitmap:Bitmap by lazy {
-        LogUtils.e(1)
-        BitmapFactory.decodeResource(resources,R.drawable.abv)
+    var position = 0f
+    var lightWidthPercent = 1f
+
+    val lightWidth by lazy {
+        lightWidthPercent*width
     }
 
-    val paint:Paint by lazy {
+
+    val gradientDrawable by lazy {
+        var gradientDrawable = GradientDrawable().also {
+            it.shape = GradientDrawable.RECTANGLE
+            it.gradientType = GradientDrawable.LINEAR_GRADIENT
+            it.orientation = GradientDrawable.Orientation.LEFT_RIGHT
+            it.colors = intArrayOf(
+                resources.getColor(R.color.color_f8f8f8),
+                resources.getColor(R.color.color_ff0000),
+                resources.getColor(R.color.color_f8f8f8),
+
+//                resources.getColor(R.color.color_ffffff),
+//                resources.getColor(R.color.color_ff0000),
+//                resources.getColor(R.color.color_ffffff),
+//                resources.getColor(R.color.color_ff0000),
+//                resources.getColor(R.color.color_ffffff),
+
+            )
+            it.setSize(
+                (2 *lightWidth).toInt(), height
+            )
+        }
+        ImageUtils.drawable2Bitmap(gradientDrawable)
+    }
+
+
+    val paint: Paint by lazy {
         Paint()
     }
 
@@ -52,61 +87,78 @@ class XfermodeView @JvmOverloads constructor(
         MainScope()
     };
 
-    var x  = 0
+    val timegap = 40L
+
+    var time = 4000f
+
+    val gap by lazy {
+        width/(time/timegap)
+    }
+
 
 
     init {
-        setLayerType(Layer.LAYER_TYPE_SOFTWARE,null)
-        mainScope.launch {
-            while (true){
-                x++
-               invalidate()
-                delay(100)
+        setLayerType(Layer.LAYER_TYPE_SOFTWARE, null)
+        viewTreeObserver.addOnGlobalLayoutListener(object :
+            ViewTreeObserver.OnGlobalLayoutListener {
+            override fun onGlobalLayout() {
+                if (width != 0) {
+                    position = -(2 *lightWidth)
+                    mainScope.launch {
+                        while (true) {
+                            position += gap
+                            if (position > 0) {
+                                position = -lightWidth
+                            }
+                            invalidate()
+                            delay(timegap)
+                        }
+                    }
+                    LogUtils.e(1)
+                    viewTreeObserver.removeOnGlobalLayoutListener(this)
+                }
             }
-        }
-        LogUtils.e(1)
+
+        })
     }
 
     override fun draw(canvas: Canvas?) {
         super.draw(canvas)
         canvas?.also {
-            drawText(canvas)
+            drawCanvas(canvas)
         }
     }
 
 
-
-    fun drawText(canvas: Canvas){
+    fun drawText(canvas: Canvas) {
         canvas.drawColor(Color.BLACK)
-        var layer = canvas.saveLayer(RectF(0f,0f,width.toFloat(),height.toFloat()),paint)
-        paint.setColor(Color.RED)
-        paint.textSize =800f
-        canvas.drawText("qwertyu",0f,1600f,paint)
-        paint.setXfermode(PorterDuffXfermode(PorterDuff.Mode.SRC_OVER))
-        paint.setColor(srcColor)
+        var layer = canvas.saveLayer(RectF(0f, 0f, width.toFloat(), height.toFloat()), paint)
+        paint.setColor(Color.WHITE)
+        paint.textSize = 800f
+        canvas.drawText("qwertyu", 0f, 1600f, paint)
+        paint.setXfermode(PorterDuffXfermode(PorterDuff.Mode.DST_IN))
         //canvas.drawRect((0f+x*10)%width,0f,(500f+x*10)%width,600f,paint)
-        canvas.drawBitmap(bitmap,(0f+x*10)%width,800f,paint)
+        canvas.drawBitmap(gradientDrawable, position, 0f, paint)
         paint.setXfermode(null)
         canvas.restoreToCount(layer)
     }
-    fun drawCanvas(canvas: Canvas){
-        canvas.drawColor(Color.BLACK)
-        var layer = canvas.saveLayer(RectF(0f,0f,width.toFloat(),height.toFloat()),paint)
-        paint.setColor(dstColor)
-        canvas.drawRect(0f,0f,600f,600f,paint)
-        paint.setXfermode(PorterDuffXfermode(PorterDuff.Mode.SRC_IN))
-        paint.setColor(srcColor)
-        canvas.drawCircle(600f,600f,300f,paint)
+
+    fun drawCanvas(canvas: Canvas) {
+        var layer = canvas.saveLayer(RectF(0f, 0f, width.toFloat(), height.toFloat()), paint)
+        paint.setColor(rectColor)
+        canvas.drawRect(0f, 300f, width.toFloat(), 1000f, paint)
+        //paint.setXfermode(PorterDuffXfermode(PorterDuff.Mode.SRC_IN))
+        canvas.drawBitmap(gradientDrawable, position, 0f, paint)
         canvas.restoreToCount(layer)
     }
 
 
-    fun drawBitmap(canvas: Canvas){
+    fun drawBitmap(canvas: Canvas) {
         canvas.drawColor(Color.BLACK)
-        var layer = canvas.saveLayer(RectF(0f,0f,width.toFloat(),height.toFloat()),paint)
-        canvas.drawBitmap(dstBitmap,0f,0f,paint)
+        var layer = canvas.saveLayer(RectF(0f, 0f, width.toFloat(), height.toFloat()), paint)
+        canvas.drawBitmap(dstBitmap, 0f, 0f, paint)
         paint.setXfermode(PorterDuffXfermode(PorterDuff.Mode.XOR))
-        canvas.drawBitmap(srcBitmap,0f,0f,paint)
+        canvas.drawBitmap(srcBitmap, 0f, 0f, paint)
         canvas.restoreToCount(layer)
     }
 }

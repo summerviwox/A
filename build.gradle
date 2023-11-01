@@ -1,7 +1,7 @@
 /**
  * Top-level build file where you can add configuration options common to all sub-projects/modules.
  * 定义好才能在sub-projects/modules使用
- * apply false 表示总不应用到所有工程  sub-projects/modules可以单独使用
+ * apply false 表示总不应用到所有工程  sub-/projectsmodules可以单独使用
  */
 //https://kotlinlang.org/docs/gradle-configure-project.html#check-for-jvm-target-compatibility-of-related-compile-tasks
 //gradle7 模板 https://www.cnblogs.com/bg-tab/p/16303565.html
@@ -9,6 +9,12 @@ buildscript {
     //kotlin library {0} was compiled with a newer kotlin compiler  kotlin_version 版本和kotlin插件不一致
     ext {
         kotlin_version = '1.8.0'
+    }
+    //https://stackoverflow.com/questions/71121109/com-huawei-agconnect-plugin-not-found/71135974#71135974
+    //搞不明白为什么写在这里就生效了 感觉像是脱裤子放屁 新版的兼容不了旧版
+    dependencies {
+        //classpath "com.bytedance.android.byteX:base-plugin:0.3.0"
+        //classpath "io.github.knight-zxw:lancet-plugin:0.0.7"
     }
 }
 plugins {
@@ -40,6 +46,10 @@ plugins {
 
      apply(plugin = "org.jetbrains.kotlin.android")*/
 
+    /*<groupId>org.jetbrains.kotlin.android</groupId>
+    <artifactId>org.jetbrains.kotlin.android.gradle.plugin</artifactId>
+    <version>1.8.0</version>*/
+    //省略了.gradle.plugin 默认会加入.gradle.plugin 搞不懂为什么这样设计
     id 'org.jetbrains.kotlin.android' version '1.8.0' apply false
 
 
@@ -58,5 +68,6 @@ plugins {
     apply plugin: "org.jetbrains.kotlin.jvm"*/
 
     id 'org.jetbrains.kotlin.jvm' version '1.8.0' apply false
-
 }
+
+
