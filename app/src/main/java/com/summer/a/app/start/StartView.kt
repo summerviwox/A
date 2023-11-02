@@ -17,6 +17,7 @@ class StartView @JvmOverloads constructor(
     }
 
     init {
-        startActivityBinding;
+
+
     }
 }
