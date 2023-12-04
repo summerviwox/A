@@ -6,6 +6,7 @@
 //https://kotlinlang.org/docs/gradle-configure-project.html#check-for-jvm-target-compatibility-of-related-compile-tasks
 //gradle7 模板 https://www.cnblogs.com/bg-tab/p/16303565.html
 buildscript {
+    println("project build.gradle buildscript start")
     //kotlin library {0} was compiled with a newer kotlin compiler  kotlin_version 版本和kotlin插件不一致
     ext {
         kotlin_version = '1.8.0'
@@ -16,6 +17,8 @@ buildscript {
         //classpath "com.bytedance.android.byteX:base-plugin:0.3.0"
         //classpath "io.github.knight-zxw:lancet-plugin:0.0.7"
     }
+    println("project build.gradle buildscript end")
+
 }
 plugins {
     //‘com.android.application’ 插件用于构建 Android 应用程序项目，生成可安装的 APK 文件
@@ -69,5 +72,24 @@ plugins {
 
     id 'org.jetbrains.kotlin.jvm' version '1.8.0' apply false
 }
+
+//println("--------------")
+//plugins.findAll {
+//    println("plugins:${it}")
+//}
+//apply plugin: 'org.jetbrains.kotlin.android'
+//apply plugin: 'com.android.library'
+
+//plugins.apply('org.jetbrains.kotlin.android')
+//plugins.apply('com.android.library')
+
+//println("--------------")
+//plugins.findAll {
+//    println("plugins:${it}")
+//}
+apply from:getRootProject().file("config.gradle")
+
+println("project build.gradle end")
+
 
 

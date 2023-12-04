@@ -1,0 +1,19 @@
+println("project config.gradle start")
+
+project.plugins.findAll {
+    println(it)
+}
+
+for(item in rootProject.getSubprojects()){
+    //这两个module不需要通用设置 它们是java module
+    if(item.name!="lib2"&&item.name!="provider"){
+        item.apply {
+            from(rootProject.file('module.gradle'))
+        }
+    }
+    println("module :${item.name}")
+
+}
+
+
+println("project config.gradle end")
