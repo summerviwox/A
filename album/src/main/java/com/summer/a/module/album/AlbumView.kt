@@ -4,7 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.summer.a.module.databinding.AlbumActivityBinding
+import com.summer.a.album.databinding.AlbumActivityBinding
 
 /**
  * 相册view
