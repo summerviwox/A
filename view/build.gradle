@@ -1,9 +1,3 @@
-plugins {
-    id 'com.android.library'
-    id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
-}
-
 android {
     namespace 'com.summer.a.view'
     sourceSets {
@@ -20,7 +14,6 @@ android {
         }
     }
 }
-apply from:rootProject.file('common.gradle')
 
 dependencies {
     implementation project(':lib')

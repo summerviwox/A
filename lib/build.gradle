@@ -1,13 +1,6 @@
-plugins {
-    id 'com.android.library'
-    id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
-}
 android {
     namespace 'com.summer.a.lib'
 }
-
-apply from:rootProject.file('common.gradle')
 
 dependencies {
     //android库 这里使用api是因为这个几个库是基本库其他module都要用到

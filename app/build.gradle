@@ -1,8 +1,3 @@
-plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
-}
 android {
     namespace 'com.summer.a.app'
     defaultConfig {
@@ -23,10 +18,7 @@ android {
     }
 }
 
-//Could not find method android() for arguments [build_dja8gyelacasrufo26vqv4zec$_run_closure1@137920cc] on project ':view' of type org.gradle.api.Project
-//plugins {}无法复用 需要在各个module加上
-//其他配置会覆盖添加
-apply from:rootProject.file('common.gradle')
+
 
 dependencies {
     implementation project(':lib')

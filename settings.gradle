@@ -1,4 +1,5 @@
 pluginManagement {
+    println("settings.gradle pluginManagement start")
     repositories {
         gradlePluginPortal()
         google()
@@ -16,17 +17,17 @@ pluginManagement {
 
     resolutionStrategy {
         eachPlugin {
-            println("#" + requested.id)
-            println("#" + requested.module)
-            println("#" + requested.version)
-            //println(requested.id+"#"+requested.module+"#"+requested.version)
+            println("settings.gradle resolutionStrategy ${requested.id} ${requested.module} ${requested.version}")
             if (requested.id == "org.jetbrains.kotlin.android") {
                 //useModule("org.jetbrains.kotlin.android:1.8.10")
             }
         }
     }
+
+    println("settings.gradle pluginManagement end")
 }
 dependencyResolutionManagement {
+    println("settings.gradle dependencyResolutionManagement start")
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
@@ -41,6 +42,7 @@ dependencyResolutionManagement {
             }
         }
     }
+    println("settings.gradle dependencyResolutionManagement end")
 }
 rootProject.name = "A"
 include ':app'
@@ -53,3 +55,6 @@ include ':provider'
 include ':web'
 include ':lib2'
 include ':album'
+
+println("settings.gradle end")
+

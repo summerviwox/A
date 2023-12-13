@@ -231,11 +231,12 @@
     <color name="color_fefcff">#FEFCFF</color>
     <color name="color_ffffff">#FFFFFF</color>
 
-    <color name="color_f8f8f8">#f8f8f8</color>
-    <color name="color_EDEDED">#00EDEDED</color>
+    <color name="color_f8f8f9">#f8f8f9</color>
+    <color name="color_f8f8f8">#ccf8f8f8</color>
+    <color name="color_EDEDED">#ffEDEDED</color>
     <color name="color_4DEDEDED">#4DEDEDED</color>
     <color name="color_80EDEDED">#80EDEDED</color>
     <color name="color_B3EDEDED">#B3EDEDED</color>
-
+    <color name="color_ccff0000">#ccFF0000</color>
 
 </resources>

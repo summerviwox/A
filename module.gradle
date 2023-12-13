@@ -1,8 +1,13 @@
-kapt {
-    arguments {
-        arg("AROUTER_MODULE_NAME", project.getName())
-    }
+println("${project.name} build.gradle start")
+//通用gradle配置 其他gradle 引入
+//apply from:rootProject.file('module.gradle')
+apply {
+    //app 项目不能用library
+    plugin project.name == "app" ? 'com.android.application':'com.android.library'
+    plugin 'org.jetbrains.kotlin.android'
+    plugin 'kotlin-kapt'
 }
+
 android {
     compileSdk 33
     defaultConfig {
@@ -10,6 +15,11 @@ android {
         targetSdk 33
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
+            }
+        }
     }
 
     buildTypes {
@@ -28,9 +38,13 @@ android {
     kotlin {
         jvmToolchain(11)
     }
-
     buildFeatures {
         viewBinding = true
     }
-
 }
+
+dependencies {
+    kapt 'com.google.auto.service:auto-service:1.1.1'
+}
+
+println("${project.name} build.gradle end")
