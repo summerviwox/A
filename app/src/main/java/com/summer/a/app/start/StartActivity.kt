@@ -15,9 +15,6 @@ class StartActivity : BaseUIActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(startView)
-        Handler(mainLooper).postDelayed({
-            startActivity(Intent(this@StartActivity,AlbumActivity::class.java))
-        },4000)
         //startActivity(Intent(this,MainActivity::class.java))
         //ProviderManager.getProvider(RouterProvider::class.java)?.intent(RouterPath._test_MainActivity)
 

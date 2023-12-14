@@ -55,6 +55,9 @@ include ':provider'
 include ':web'
 include ':lib2'
 include ':album'
+include ':network'
+include ':bean'
+include ':model'
 
 println("settings.gradle end")
 
