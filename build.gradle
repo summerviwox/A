@@ -21,6 +21,7 @@ buildscript {
 
 }
 plugins {
+    //The project is using an incompatible version (AGP 8.1.0) of the Android Gradle plugin. Latest supported version is AGP 8.0.0 更新你的android studio
     //‘com.android.application’ 插件用于构建 Android 应用程序项目，生成可安装的 APK 文件
     //java17内部版本61 java11 内部版本55 com/android/tools/lint/model/LintModelSeverity has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
     //https://developer.android.com/reference/tools/gradle-api
