@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!--屏幕适配宽度为720等分-->
 <resources>
     <dimen name="sw_0dp">0.0dp</dimen>
     <dimen name="sw_1dp">0.72dp</dimen>

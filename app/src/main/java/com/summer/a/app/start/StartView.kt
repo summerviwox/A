@@ -1,9 +1,11 @@
 package com.summer.a.app.start
 
 import android.content.Context
+import android.content.Intent
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.summer.a.album.AlbumActivity
 import com.summer.a.app.databinding.StartActivityBinding
 
 class StartView @JvmOverloads constructor(
@@ -17,6 +19,9 @@ class StartView @JvmOverloads constructor(
     }
 
     init {
-        startActivityBinding
+        startActivityBinding.x.setOnClickListener {
+            context.startActivity(Intent(context, AlbumActivity::class.java))
+        }
+
     }
 }
