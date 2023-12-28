@@ -19,7 +19,7 @@ class CanvasView1 @JvmOverloads constructor(
         height / 2f
     }
 
-    override fun draw(canvas: Canvas?) {
+    override fun draw(canvas: Canvas) {
         super.draw(canvas)
         paint.setColor(Color.RED)
         canvas?.apply {

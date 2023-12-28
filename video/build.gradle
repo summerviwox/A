@@ -1,0 +1,26 @@
+android {
+    namespace 'com.summer.a.video'
+    sourceSets {
+        main{
+            java.srcDirs=[
+                    'src/main/java'
+            ]
+            res.srcDirs=[
+                    'src/main/res',
+            ]
+        }
+    }
+}
+
+dependencies {
+    implementation project(':lib')
+    api project(':screenmatch')
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+
+    //基础依赖包，必须要依赖
+    implementation 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+    //kotlin扩展（可选）
+    implementation 'com.geyifeng.immersionbar:immersionbar-ktx:3.2.2'
+    //https://github.com/CarGuo/GSYVideoPlayer?tab=readme-ov-file
+    implementation 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer:v8.5.0-release-jitpack'
+}

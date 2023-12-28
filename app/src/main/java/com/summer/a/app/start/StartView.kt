@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.summer.a.album.AlbumActivity
 import com.summer.a.app.databinding.StartActivityBinding
+import com.summer.a.video.VideoActivity
 
 class StartView @JvmOverloads constructor(
     context: Context,
@@ -20,7 +21,7 @@ class StartView @JvmOverloads constructor(
 
     init {
         startActivityBinding.x.setOnClickListener {
-            context.startActivity(Intent(context, AlbumActivity::class.java))
+            context.startActivity(Intent(context, VideoActivity::class.java))
         }
 
     }

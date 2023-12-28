@@ -1,8 +1,9 @@
 package com.summer.a.app
 
 import android.app.Application
+import androidx.multidex.MultiDexApplication
 
-class AApplication : Application() {
+class AApplication : MultiDexApplication() {
 
     override fun onCreate() {
         super.onCreate()

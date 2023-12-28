@@ -4,6 +4,16 @@ android {
         applicationId "com.summer.a.app"
         versionCode 1
         versionName "1.0"
+        //by: com.android.tools.r8.CompilationFailedException: Compilation failed to complete 	at Version.fake
+        multiDexEnabled true
+        ndk {
+//            armeabi-v7a: 第7代及以上的 32位ARM 处理器
+//            arm64-v8a: 第8代、64位ARM处理器
+//            armeabi: 第5代、第6代的32位ARM处理器，早期的手机在使用，现在基本很少了。
+//            x86: Intel 32位处理器，在平板、模拟器用得比较多。
+//            x86_64: Intel 64位处理器，在平板、模拟器用得比较多。
+            abiFilters 'arm64-v8a'//,'armeabi-v7a','arm64-v8a','x86','x86_64'
+        }
     }
     sourceSets {
         main{
@@ -16,6 +26,7 @@ android {
             ]
         }
     }
+    compileSdk 34
 }
 
 
@@ -29,4 +40,7 @@ dependencies {
     //kapt project(':provider')
     implementation 'com.squareup:javapoet:1.13.0'
     implementation project(":album")
+    implementation project(":video")
+
+    implementation 'com.android.support:multidex:1.0.3'
 }

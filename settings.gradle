@@ -58,6 +58,7 @@ include ':album'
 include ':network'
 include ':bean'
 include ':model'
+include ':video'
 
 println("settings.gradle end")
 

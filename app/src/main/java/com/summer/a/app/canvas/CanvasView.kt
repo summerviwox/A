@@ -35,7 +35,7 @@ class CanvasView @JvmOverloads constructor(
         }
     }
 
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         canvas?.apply {
             this.drawARGB(255, 200, 200, 200)
