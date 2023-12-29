@@ -1,4 +1,5 @@
-println("${project.name} build.gradle start")
+import com.summer.a.util.LogUtil
+LogUtil.log("${project.name} build.gradle start ---------------------------------------")
 //通用gradle配置 其他gradle 引入
 //apply from:rootProject.file('module.gradle')
 apply {
@@ -9,10 +10,10 @@ apply {
 }
 
 android {
-    compileSdk 33
     defaultConfig {
         minSdk 21
         targetSdk 33
+        compileSdk 34
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
         kapt {
@@ -47,4 +48,4 @@ dependencies {
     kapt 'com.google.auto.service:auto-service:1.1.1'
 }
 
-println("${project.name} build.gradle end")
+LogUtil.log("${project.name} build.gradle end  ---------------------------------------")

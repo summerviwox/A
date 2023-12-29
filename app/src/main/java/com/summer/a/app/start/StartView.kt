@@ -5,7 +5,6 @@ import android.content.Intent
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.summer.a.album.AlbumActivity
 import com.summer.a.app.databinding.StartActivityBinding
 import com.summer.a.video.VideoActivity
 

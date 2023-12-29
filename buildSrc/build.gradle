@@ -1,0 +1,33 @@
+plugins {
+    id 'groovy' // （必选）用于实现插件
+    //id 'maven' // 用于发布插件
+}
+
+// 设置源文件路径
+sourceSets {
+    main {
+        groovy {
+            srcDir 'src/main/groovy'
+        }
+
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+}
+//is a duplicate but no duplicate handling strategy has been set
+//https://www.cnblogs.com/Starsdust/archive/2023/09/25/17727339.html
+tasks.withType(Copy).all { duplicatesStrategy 'exclude' }
+
+
+apply from:new File(projectDir,"test.gradle")
+
+//不知道为什么只有当前module无法引入
+//import DeleteSDKSOTask
+
+

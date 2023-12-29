@@ -1,0 +1,15 @@
+task a{
+    //println("test.gralde a")
+    doFirst {
+        println("test.gralde-a-doFirst")
+    }
+    doLast {
+        println("test.gralde-a-doLast")
+    }
+}
+
+task b{
+    dependsOn(a)
+    //println("test.gralde-b")
+}
+

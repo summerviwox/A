@@ -62,9 +62,9 @@ class XfermodeView @JvmOverloads constructor(
             it.gradientType = GradientDrawable.LINEAR_GRADIENT
             it.orientation = GradientDrawable.Orientation.LEFT_RIGHT
             it.colors = intArrayOf(
-                resources.getColor(R.color.color_f8f8f8),
-                resources.getColor(R.color.color_ccff0000),
-                resources.getColor(R.color.color_f8f8f8),
+                resources.getColor(R.color.color_f8f8f8,null),
+                resources.getColor(R.color.color_ccff0000,null),
+                resources.getColor(R.color.color_f8f8f8,null),
 
             )
             it.setSize(
@@ -139,7 +139,7 @@ class XfermodeView @JvmOverloads constructor(
         })
     }
 
-    override fun draw(canvas: Canvas?) {
+    override fun draw(canvas: Canvas) {
         super.draw(canvas)
         canvas?.also {
             drawCanvas(canvas)

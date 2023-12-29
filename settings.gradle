@@ -1,5 +1,5 @@
 pluginManagement {
-    println("settings.gradle pluginManagement start")
+    println("settings.gradle start ---------------------------------------")
     repositories {
         gradlePluginPortal()
         google()
@@ -23,11 +23,8 @@ pluginManagement {
             }
         }
     }
-
-    println("settings.gradle pluginManagement end")
 }
 dependencyResolutionManagement {
-    println("settings.gradle dependencyResolutionManagement start")
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
@@ -42,7 +39,6 @@ dependencyResolutionManagement {
             }
         }
     }
-    println("settings.gradle dependencyResolutionManagement end")
 }
 rootProject.name = "A"
 include ':app'
@@ -60,5 +56,7 @@ include ':bean'
 include ':model'
 include ':video'
 
-println("settings.gradle end")
+println("settings.gradle end   ---------------------------------------")
+
+
 

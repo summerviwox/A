@@ -1,3 +1,6 @@
+apply {
+    plugin 'com.summer.a.plugin'
+}
 android {
     namespace 'com.summer.a.app'
     defaultConfig {
@@ -26,7 +29,14 @@ android {
             ]
         }
     }
-    compileSdk 34
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+        debug {
+            minifyEnabled false
+        }
+    }
 }
 
 
@@ -34,13 +44,16 @@ android {
 dependencies {
     implementation project(':lib')
     implementation project(':view')
-    implementation project(':login')
-    implementation project(':web')
+    //implementation project(':login')
+    //implementation project(':web')
     kapt 'com.google.auto.service:auto-service:1.1.1'
     //kapt project(':provider')
     implementation 'com.squareup:javapoet:1.13.0'
-    implementation project(":album")
+    //implementation project(":album")
     implementation project(":video")
 
     implementation 'com.android.support:multidex:1.0.3'
 }
+
+
+

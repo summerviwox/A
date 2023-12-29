@@ -1,7 +1,9 @@
-println("project config.gradle start")
+import com.summer.a.util.LogUtil
+
+println("project config.gradle start ---------------------------------------")
 
 project.plugins.findAll {
-    println(it)
+    LogUtil.log(it)
 }
 
 for(item in rootProject.getSubprojects()){
@@ -11,9 +13,9 @@ for(item in rootProject.getSubprojects()){
             from(rootProject.file('module.gradle'))
         }
     }
-    println("module :${item.name}")
+    LogUtil.log("module :${item.name}")
 
 }
 
 
-println("project config.gradle end")
+println("project config.gradle end   ---------------------------------------")

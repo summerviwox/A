@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/album" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bean" />
+            <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/lib" />
             <option value="$PROJECT_DIR$/lib2" />
             <option value="$PROJECT_DIR$/login" />
