@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.summer.a.view.round.RoundConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="@dimen/sw_5dp"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditText
+        android:id="@+id/edit"
+        android:gravity="start"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:text="111111111111111111111111111111111111111111111111111111111111"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sw_300dp"/>
+
+</com.summer.a.view.round.RoundConstraintLayout>

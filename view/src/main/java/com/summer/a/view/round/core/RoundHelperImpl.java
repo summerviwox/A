@@ -96,9 +96,9 @@ public class RoundHelperImpl implements RoundHelper {
         mStrokeColorStateList = array.getColorStateList(R.styleable.RoundCorner_rStrokeColor);
 
         isNewLayer = array.getBoolean(R.styleable.RoundCorner_rNewLayer, false);
-        if (isNewLayer && Build.VERSION.SDK_INT >= Build.VERSION_CODES.P && view instanceof ViewGroup) {
-            view.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
-        }
+//        if (isNewLayer && Build.VERSION.SDK_INT >= Build.VERSION_CODES.P && view instanceof ViewGroup) {
+//            view.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+//        }
 
         array.recycle();
     }
@@ -130,7 +130,7 @@ public class RoundHelperImpl implements RoundHelper {
 
     @Override
     public void preDraw(Canvas canvas) {
-        canvas.saveLayer(isNewLayer && Build.VERSION.SDK_INT > Build.VERSION_CODES.P ? mOriginRectF : mRectF, null, Canvas.ALL_SAVE_FLAG);
+        //canvas.saveLayer(isNewLayer && Build.VERSION.SDK_INT > Build.VERSION_CODES.P ? mOriginRectF : mRectF, null, Canvas.ALL_SAVE_FLAG);
     }
 
     @Override

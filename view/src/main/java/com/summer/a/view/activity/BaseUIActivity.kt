@@ -8,8 +8,5 @@ open class BaseUIActivity:BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        immersionBar {
-            transparentBar()
-        }
     }
 }

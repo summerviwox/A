@@ -29,4 +29,5 @@ dependencies {
     //kapt project(':provider')
     implementation 'com.squareup:javapoet:1.13.0'
     implementation project(":album")
+    implementation project(':notes')
 }
