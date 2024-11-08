@@ -25,9 +25,9 @@ plugins {
     //‘com.android.application’ 插件用于构建 Android 应用程序项目，生成可安装的 APK 文件
     //java17内部版本61 java11 内部版本55 com/android/tools/lint/model/LintModelSeverity has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
     //https://developer.android.com/reference/tools/gradle-api
-    id 'com.android.application' version '8.1.0' apply false
+    id 'com.android.application' version '8.3.0' apply false
     //‘com.android.library’ 插件用于构建可重用的 Android 库项目，供其他应用程序项目使用
-    id 'com.android.library' version '8.1.0' apply false
+    id 'com.android.library' version '8.3.0' apply false
     /**
      * ‘kotlin-android’ 插件是用于在 Android 项目中使用 Kotlin 编程语言的插件
      * Duplicate class kotlin.collections.jdk8.CollectionsJDK8Kt found in modules kotlin-stdlib-1.8.10 (org.jetbrains.kotlin:kotlin-stdlib:1.8.10) and kotlin-stdlib-jdk8-1.7.20 (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20)
