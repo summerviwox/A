@@ -14,7 +14,6 @@ pluginManagement {
             }
         }
     }
-
     resolutionStrategy {
         eachPlugin {
             println("settings.gradle resolutionStrategy ${requested.id} ${requested.module} ${requested.version}")
@@ -23,7 +22,6 @@ pluginManagement {
             }
         }
     }
-
     println("settings.gradle pluginManagement end")
 }
 dependencyResolutionManagement {
@@ -44,6 +42,7 @@ dependencyResolutionManagement {
     }
     println("settings.gradle dependencyResolutionManagement end")
 }
+
 rootProject.name = "A"
 include ':app'
 include ':lib'

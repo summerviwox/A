@@ -9,7 +9,7 @@ buildscript {
     println("project build.gradle buildscript start")
     //kotlin library {0} was compiled with a newer kotlin compiler  kotlin_version 版本和kotlin插件不一致
     ext {
-        kotlin_version = '1.9.23'
+        kotlin_version = "${KOTLIN_VERSION}"
     }
     //https://stackoverflow.com/questions/71121109/com-huawei-agconnect-plugin-not-found/71135974#71135974
     //搞不明白为什么写在这里就生效了 感觉像是脱裤子放屁 新版的兼容不了旧版
@@ -25,9 +25,9 @@ plugins {
     //‘com.android.application’ 插件用于构建 Android 应用程序项目，生成可安装的 APK 文件
     //java17内部版本61 java11 内部版本55 com/android/tools/lint/model/LintModelSeverity has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
     //https://developer.android.com/reference/tools/gradle-api
-    id 'com.android.application' version '8.3.0' apply false
+    id 'com.android.application' version "${ANDROID_GRADLE_PLUGIN}" apply false
     //‘com.android.library’ 插件用于构建可重用的 Android 库项目，供其他应用程序项目使用
-    id 'com.android.library' version '8.3.0' apply false
+    id 'com.android.library' version "${ANDROID_GRADLE_PLUGIN}" apply false
     /**
      * ‘kotlin-android’ 插件是用于在 Android 项目中使用 Kotlin 编程语言的插件
      * Duplicate class kotlin.collections.jdk8.CollectionsJDK8Kt found in modules kotlin-stdlib-1.8.10 (org.jetbrains.kotlin:kotlin-stdlib:1.8.10) and kotlin-stdlib-jdk8-1.7.20 (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20)
@@ -54,7 +54,7 @@ plugins {
     <artifactId>org.jetbrains.kotlin.android.gradle.plugin</artifactId>
     <version>1.8.0</version>*/
     //省略了.gradle.plugin 默认会加入.gradle.plugin 搞不懂为什么这样设计
-    id 'org.jetbrains.kotlin.android' version '1.9.23' apply false
+    id 'org.jetbrains.kotlin.android' version "${KOTLIN_VERSION}" apply false
 
 
     /*
@@ -71,7 +71,7 @@ plugins {
     }
     apply plugin: "org.jetbrains.kotlin.jvm"*/
 
-    id 'org.jetbrains.kotlin.jvm' version '1.9.23' apply false
+    id 'org.jetbrains.kotlin.jvm' version "${KOTLIN_VERSION}" apply false
 }
 
 //println("--------------")
