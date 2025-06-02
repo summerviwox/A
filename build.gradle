@@ -9,7 +9,7 @@ buildscript {
     println("project build.gradle buildscript start")
     //kotlin library {0} was compiled with a newer kotlin compiler  kotlin_version 版本和kotlin插件不一致
     ext {
-        kotlin_version = '1.8.0'
+        kotlin_version = '1.9.23'
     }
     //https://stackoverflow.com/questions/71121109/com-huawei-agconnect-plugin-not-found/71135974#71135974
     //搞不明白为什么写在这里就生效了 感觉像是脱裤子放屁 新版的兼容不了旧版
@@ -54,7 +54,7 @@ plugins {
     <artifactId>org.jetbrains.kotlin.android.gradle.plugin</artifactId>
     <version>1.8.0</version>*/
     //省略了.gradle.plugin 默认会加入.gradle.plugin 搞不懂为什么这样设计
-    id 'org.jetbrains.kotlin.android' version '1.8.0' apply false
+    id 'org.jetbrains.kotlin.android' version '1.9.23' apply false
 
 
     /*
@@ -71,7 +71,7 @@ plugins {
     }
     apply plugin: "org.jetbrains.kotlin.jvm"*/
 
-    id 'org.jetbrains.kotlin.jvm' version '1.8.0' apply false
+    id 'org.jetbrains.kotlin.jvm' version '1.9.23' apply false
 }
 
 //println("--------------")
