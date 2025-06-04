@@ -3,7 +3,7 @@
 
     <application>
         <activity
-            android:name="com.summer.a.module.album.AlbumActivity"
+            android:name="com.summer.module.album.AlbumActivity"
             android:configChanges="screenSize|orientation|keyboard|keyboardHidden"
             android:exported="true" />
     </application>

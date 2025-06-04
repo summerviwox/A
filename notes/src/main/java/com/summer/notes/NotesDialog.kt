@@ -8,8 +8,8 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.WindowManager.LayoutParams
 import com.blankj.utilcode.util.KeyboardUtils
-import com.summer.a.screenmatch.R
-import com.summer.a.notes.databinding.NotesDialogBinding
+import com.summer.screenmatch.R
+import com.summer.notes.databinding.NotesDialogBinding
 
 class NotesDialog(context: Context,out:(String)->Unit) : Dialog(context) {
 

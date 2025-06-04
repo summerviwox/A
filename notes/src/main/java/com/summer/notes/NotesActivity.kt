@@ -9,8 +9,8 @@ import android.view.inputmethod.InputMethodManager
 import com.blankj.utilcode.util.KeyboardUtils
 import com.blankj.utilcode.util.LogUtils
 import com.gyf.immersionbar.ImmersionBar
-import com.summer.a.notes.databinding.NotesActivityBinding
-import com.summer.a.view.activity.BaseUIActivity
+import com.summer.notes.databinding.NotesActivityBinding
+import com.summer.view.activity.BaseUIActivity
 
 /**
  * activity-代办笔记

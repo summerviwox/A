@@ -1,5 +1,5 @@
 android {
-    namespace 'com.summer.a.view'
+    namespace 'com.summer.view'
     sourceSets {
         main{
             java.srcDirs=[

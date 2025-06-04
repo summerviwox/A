@@ -1,5 +1,5 @@
 android {
-    namespace 'com.summer.a.compose'
+    namespace 'com.summer.compose'
     buildFeatures{
         compose true
     }

@@ -1,5 +1,5 @@
 android {
-    namespace 'com.summer.a.album'
+    namespace 'com.summer.album'
 }
 dependencies {
     implementation project(':lib')

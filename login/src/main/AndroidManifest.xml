@@ -9,12 +9,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.A">
         <activity
-            android:name="com.summer.a.login.LoginActivity"
+            android:name="com.summer.login.LoginActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:configChanges="keyboard|orientation|keyboardHidden"></activity>
         <activity
-            android:name="com.summer.a.login.Login2Activity"
+            android:name="com.summer.login.Login2Activity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:configChanges="keyboard|orientation|keyboardHidden"></activity>

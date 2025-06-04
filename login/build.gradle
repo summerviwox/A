@@ -1,5 +1,5 @@
 android {
-    namespace 'com.summer.a.login'
+    namespace 'com.summer.login'
 }
 dependencies {
     implementation project(':lib')

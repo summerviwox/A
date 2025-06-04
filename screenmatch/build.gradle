@@ -1,5 +1,5 @@
 android {
-    namespace 'com.summer.a.screenmatch'
+    namespace 'com.summer.screenmatch'
 }
 dependencies {
 

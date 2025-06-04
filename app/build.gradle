@@ -1,7 +1,7 @@
 android {
-    namespace 'com.summer.a.app'
+    namespace 'com.summer.app'
     defaultConfig {
-        applicationId "com.summer.a.app"
+        applicationId "com.summer.app"
         versionCode 1
         versionName "1.0"
     }
@@ -22,11 +22,4 @@ dependencies {
     implementation project(':view')
     implementation project(':login')
     implementation project(':web')
-    kapt 'com.google.auto.service:auto-service:1.1.1'
-    kapt project(':provider')
-    implementation project(':lib2')
-    implementation 'com.squareup:javapoet:1.13.0'
-    implementation project(":album")
-    implementation project(':notes')
-    implementation project(':compose')
 }

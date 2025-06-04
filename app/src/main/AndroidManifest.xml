@@ -24,7 +24,7 @@
             android:required="false" />
 
         <activity
-            android:name="com.summer.a.compose.ComposeActivity"
+            android:name=".MainActivity"
             android:windowSoftInputMode="adjustPan|stateHidden"
             android:screenOrientation="portrait"
             tools:replace="android:configChanges"
@@ -38,10 +38,6 @@
                 <!--没有启动默认的activity edit configurations 删除配置 再重新配置一个即可运行-->
             </intent-filter>
         </activity>
-
-        <activity
-            android:name="com.summer.a.app.MainActivity"
-            android:configChanges="keyboard|orientation|screenSize" />
 
     </application>
 

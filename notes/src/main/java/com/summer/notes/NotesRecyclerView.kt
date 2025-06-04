@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.summer.a.notes.databinding.NotesItemBinding
+import com.summer.notes.databinding.NotesItemBinding
 
 class NotesRecyclerView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null

@@ -3,7 +3,7 @@
 
     <application>
         <activity
-            android:name="com.summer.a.compose.ComposeActivity"
+            android:name="com.summer.compose.ComposeActivity"
             android:configChanges="screenSize|orientation|keyboard|keyboardHidden"
             android:exported="true" />
     </application>

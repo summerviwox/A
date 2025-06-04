@@ -1,5 +1,5 @@
 android {
-    namespace 'com.summer.a.model'
+    namespace 'com.summer.model'
 }
 dependencies {
     implementation project(':lib')
