@@ -58,6 +58,7 @@ include ':network'
 include ':bean'
 include ':model'
 include ':notes'
+include ':compose'
 
 println("settings.gradle end")
 

@@ -140,9 +140,9 @@ class XfermodeView @JvmOverloads constructor(
         })
     }
 
-    override fun draw(canvas: Canvas?) {
+    override fun draw(canvas: Canvas) {
         super.draw(canvas)
-        canvas?.also {
+        canvas.also {
             drawCanvas(canvas)
         }
     }

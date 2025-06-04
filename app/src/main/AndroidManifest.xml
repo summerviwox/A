@@ -24,9 +24,10 @@
             android:required="false" />
 
         <activity
-            android:name=".start.StartActivity"
+            android:name="com.summer.a.compose.ComposeActivity"
             android:windowSoftInputMode="adjustPan|stateHidden"
             android:screenOrientation="portrait"
+            tools:replace="android:configChanges"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:exported="true">
             <intent-filter>
