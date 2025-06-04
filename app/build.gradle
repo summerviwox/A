@@ -20,6 +20,4 @@ android {
 dependencies {
     implementation project(':lib')
     implementation project(':view')
-    implementation project(':login')
-    implementation project(':web')
 }
