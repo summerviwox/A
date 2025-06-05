@@ -24,7 +24,7 @@
             android:required="false" />
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.summer.module.album.AlbumActivity"
             android:windowSoftInputMode="adjustPan|stateHidden"
             android:screenOrientation="portrait"
             tools:replace="android:configChanges"
