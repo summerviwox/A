@@ -1,0 +1,12 @@
+android {
+    namespace 'com.summer.database'
+}
+dependencies {
+    implementation project(':lib')
+
+    //room集成 https://developer.android.com/jetpack/androidx/releases/room?hl=zh-cn#groovy
+    //room教程 https://developer.android.google.cn/codelabs/basic-android-kotlin-training-persisting-data-room?hl=zh-cn#0
+    implementation "androidx.room:room-runtime:${ROOM}"
+    kapt "androidx.room:room-compiler:${ROOM}"
+    implementation "androidx.room:room-ktx:${ROOM}"
+}

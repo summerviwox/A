@@ -59,6 +59,7 @@ include ':bean'
 include ':model'
 include ':notes'
 include ':compose'
+include ':database'
 
 println("settings.gradle end")
 
