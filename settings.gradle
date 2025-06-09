@@ -1,5 +1,5 @@
 pluginManagement {
-    println("settings.gradle pluginManagement start")
+    println("settings.gradle pluginManagement----------------------------------------------------------------------------------------")
     repositories {
         gradlePluginPortal()
         google()
@@ -22,25 +22,30 @@ pluginManagement {
             }
         }
     }
-    println("settings.gradle pluginManagement end")
+    println("----------------------------------------------------------------------------------------settings.gradle pluginManagement")
 }
 dependencyResolutionManagement {
-    println("settings.gradle dependencyResolutionManagement start")
+    println("settings.gradle dependencyResolutionManagement----------------------------------------------------------------------------------------")
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
         maven { url "https://jitpack.io" }
-        maven {
-            allowInsecureProtocol = true
-            url "https://www.summerviwox.com:8443/repository/X/"
-            credentials {
-                username = "admin"
-                password = "canVAS700217#"
-            }
+//        maven {
+//            allowInsecureProtocol = true
+//            url "https://www.summerviwox.com:8443/repository/X/"
+//            credentials {
+//                username = "admin"
+//                password = "canVAS700217#"
+//            }
+//        }
+    }
+    versionCatalogs {
+        libs {
+            from(files("libs.versions.toml"))
         }
     }
-    println("settings.gradle dependencyResolutionManagement end")
+    println("----------------------------------------------------------------------------------------settings.gradle dependencyResolutionManagement")
 }
 
 rootProject.name = "A"
@@ -61,5 +66,4 @@ include ':notes'
 include ':compose'
 include ':database'
 
-println("settings.gradle end")
-
+println("----------------------------------------------------------------------------------------settings.gradle")

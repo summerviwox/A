@@ -5,6 +5,12 @@ dependencies {
     implementation project(':lib')
     api project(':bean')
     //https://square.github.io/retrofit/ https://github.com/square/retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+//    api 'com.squareup.retrofit2:retrofit:2.9.0'
+//    api 'com.squareup.retrofit2:converter-gson:2.9.0'
+    //okhttp集成 https://square.github.io/okhttp/
+    // define a BOM and its version
+    implementation(platform(libs.com.squareup.okhttp3.okhttp.bom))
+    // define any required OkHttp artifacts without version
+    implementation(libs.com.squareup.okhttp3.okhttp)
+    implementation(libs.com.squareup.okhttp3.logging.interceptor)
 }

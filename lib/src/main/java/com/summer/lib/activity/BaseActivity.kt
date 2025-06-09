@@ -7,6 +7,8 @@ public open class BaseActivity : FragmentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
+}
+inline fun <reified T : BaseViewModel> BaseActivity.getViewModel(): T {
+    return BaseViewModel.getWith<T>(this)
 }

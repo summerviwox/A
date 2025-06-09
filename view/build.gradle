@@ -18,10 +18,10 @@ android {
 dependencies {
     api project(':lib')
     api project(':screenmatch')
-    api 'com.github.bumptech.glide:glide:4.15.1'
-
+    api(libs.com.github.bumptech.glide)
     //基础依赖包，必须要依赖
-    api 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+    api(libs.com.geyifeng.immersionbar)
     //kotlin扩展（可选）
-    api 'com.geyifeng.immersionbar:immersionbar-ktx:3.2.2'
+    api(libs.com.geyifeng.immersionbar.ktx)
+    api(libs.androidx.viewpager2)
 }

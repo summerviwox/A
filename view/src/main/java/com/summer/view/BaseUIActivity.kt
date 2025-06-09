@@ -1,7 +1,6 @@
-package com.summer.view.activity
+package com.summer.view
 
 import android.os.Bundle
-import com.gyf.immersionbar.ktx.immersionBar
 import com.summer.lib.activity.BaseActivity
 
 open class BaseUIActivity:BaseActivity() {
@@ -10,3 +9,4 @@ open class BaseUIActivity:BaseActivity() {
         super.onCreate(savedInstanceState)
     }
 }
+

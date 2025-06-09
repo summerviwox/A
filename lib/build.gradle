@@ -5,21 +5,15 @@ android {
 dependencies {
     //android库 这里使用api是因为这个几个库是基本库其他module都要用到
     //使用api关键字声明依赖项时，这些依赖项将被传递给依赖于当前模块的其他模块。这意味着，如果你在一个库模块中使用了api关键字声明依赖，当其他模块依赖该库模块时，它们也将自动依赖库模块的传递依赖，即使是这些传递依赖库模块并不需要的。
-    api 'androidx.core:core-ktx:1.10.1'
-    api 'androidx.appcompat:appcompat:1.6.1'
-    api 'androidx.fragment:fragment-ktx:1.6.1'
+    api(libs.androidx.core)
+    api(libs.androidx.appcompat)
+    api(libs.androidx.fragment)
     //★Dependency 'androidx.appcompat:appcompat-resources:1.6.1' requires libraries and applications that depend on it to compile against version 33 or later of the Android APIs.
     //❤compileSdk 32 改成 33
-    api 'com.google.android.material:material:1.9.0'
-    api 'com.blankj:utilcodex:1.31.1'
+    api(libs.com.google.android.material)
+    api(libs.com.blankj.utilcodex)
     // https://mvnrepository.com/artifact/com.google.auto.service/auto-service
-    api 'com.google.auto.service:auto-service:1.1.1'
+    api(libs.com.google.auto.service)
     api project(':provider')
     //kapt project(':provider')
-    //测试库
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    // Testing Fragments in Isolation
-    debugImplementation 'androidx.fragment:fragment-testing:1.6.1'
 }

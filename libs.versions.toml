@@ -1,0 +1,40 @@
+# 集中定义避免混乱
+[versions]
+kotlin = "2.1.21"
+gradle = '8.10.1'
+#需要和settings-build-build tools-gradle-gradle sdk对应
+java ='17'
+room='2.7.1'
+#https://developer.android.com/jetpack/androidx/releases/compose-kotlin?hl=zh-cn
+compose='1.5.13'
+compileSdk = "36"
+minSdk = "24"
+targetSdk = "36"
+[plugins]
+org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+com-android-application = { id = "com.android.application", version.ref = "gradle" }
+com-android-library = { id = "com.android.library", version.ref = "gradle" }
+[libraries]
+com-github-bumptech-glide = {group='com.github.bumptech.glide',name='glide',version="4.15.1"}
+com-geyifeng-immersionbar = {group='com.geyifeng.immersionbar',name='immersionbar',version="3.2.2"}
+com-geyifeng-immersionbar-ktx = {group='com.geyifeng.immersionbar',name='immersionbar-ktx',version="3.2.2"}
+com-google-auto-service = {group='com.google.auto.service',name='auto-service',version="1.1.1"}
+com-squareup-javapoet = {group='com.squareup',name='javapoet',version="1.13.0"}
+com-squareup-okhttp3-okhttp-bom = {group='com.squareup.okhttp3',name='okhttp-bom',version="4.12.0"}
+com-squareup-okhttp3-okhttp = {group='com.squareup.okhttp3',name='okhttp'}
+com-squareup-okhttp3-logging-interceptor = {group='com.squareup.okhttp3',name='logging-interceptor'}
+androidx-core = {group='androidx.core',name='core-ktx',version="1.10.1"}
+androidx-appcompat = {group='androidx.appcompat',name='appcompat',version="1.6.1"}
+androidx-fragment = {group='androidx.fragment',name='fragment-ktx',version="1.6.1"}
+com-google-android-material = {group='com.google.android.material',name='material',version="1.9.0"}
+com-blankj-utilcodex = {group='com.blankj',name='utilcodex',version="1.31.1"}
+androidx-compose-compose-bom = {group='androidx.compose',name='compose-bom',version="2025.05.00"}
+androidx-compose-material3 = {group='androidx.compose.material3',name='material3'}
+androidx-compose-ui-tooling-preview = {group='androidx.compose.ui',name='ui-tooling-preview'}
+androidx-compose-ui-tooling = {group='androidx.compose.ui',name='ui-tooling'}
+androidx-compose-runtime = {group='androidx.compose.runtime',name='runtime'}
+androidx-room-runtime = {group='androidx.room',name='room-runtime',version.ref="room"}
+androidx-room-compiler = {group='androidx.room',name='room-compiler',version.ref="room"}
+androidx-room-ktx = {group='androidx.room',name='room-ktx',version.ref="room"}
+androidx-viewpager2 = {group='androidx.viewpager2',name='viewpager2',version="1.0.0"}

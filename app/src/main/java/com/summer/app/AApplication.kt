@@ -1,8 +1,9 @@
 package com.summer.app
 
 import android.app.Application
+import com.summer.album.AlbumApplication
 
-class AApplication : Application() {
+class AApplication : AlbumApplication() {
 
     override fun onCreate() {
         super.onCreate()

@@ -6,7 +6,8 @@ dependencies {
 
     //room集成 https://developer.android.com/jetpack/androidx/releases/room?hl=zh-cn#groovy
     //room教程 https://developer.android.google.cn/codelabs/basic-android-kotlin-training-persisting-data-room?hl=zh-cn#0
-    implementation "androidx.room:room-runtime:${ROOM}"
-    kapt "androidx.room:room-compiler:${ROOM}"
-    implementation "androidx.room:room-ktx:${ROOM}"
+    //导致 kotlin不兼容 升级kotlin到最新的版本
+    api(libs.androidx.room.runtime)
+    kapt(libs.androidx.room.compiler)
+    api(libs.androidx.room.ktx)
 }

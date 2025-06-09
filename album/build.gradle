@@ -4,5 +4,10 @@ android {
 dependencies {
     implementation project(':lib')
     implementation project(':view')
-    implementation project(":network")
+    api project(":network")
+    api project(":database")
+    //https://github.com/CarGuo/GSYVideoPlayer
+    implementation 'com.github.CarGuo.GSYVideoPlayer:gsyvideoplayer:v10.2.0'
+    //https://github.com/Baseflow/PhotoView
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
 }

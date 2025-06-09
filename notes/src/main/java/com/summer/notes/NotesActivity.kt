@@ -1,16 +1,9 @@
 package com.summer.notes
 
-import android.content.Context
-import android.inputmethodservice.InputMethodService
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.view.inputmethod.InputMethodManager
-import com.blankj.utilcode.util.KeyboardUtils
-import com.blankj.utilcode.util.LogUtils
 import com.gyf.immersionbar.ImmersionBar
 import com.summer.notes.databinding.NotesActivityBinding
-import com.summer.view.activity.BaseUIActivity
+import com.summer.view.BaseUIActivity
 
 /**
  * activity-代办笔记
