@@ -19,5 +19,8 @@ class StartActivity : BaseUIActivity() {
         //ProviderManager.getProvider(RouterProvider::class.java)?.intent(RouterPath._test_MainActivity)
         navigation(TVProvider::class.java)
         goTo("/tv/main")
+
+
+
     }
 }
