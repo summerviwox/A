@@ -16,6 +16,7 @@ buildscript {
     dependencies {
         //classpath "com.bytedance.android.byteX:base-plugin:0.3.0"
         //classpath "io.github.knight-zxw:lancet-plugin:0.0.7"
+        classpath "com.alibaba:arouter-register:${AROUTER_REGISTER}"
     }
     println("project build.gradle buildscript end")
 
@@ -25,8 +26,10 @@ plugins {
     //‘com.android.application’ 插件用于构建 Android 应用程序项目，生成可安装的 APK 文件
     //java17内部版本61 java11 内部版本55 com/android/tools/lint/model/LintModelSeverity has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
     //https://developer.android.com/reference/tools/gradle-api
+    //noinspection GradlePluginVersion
     id 'com.android.application' version "${ANDROID_GRADLE_PLUGIN}" apply false
     //‘com.android.library’ 插件用于构建可重用的 Android 库项目，供其他应用程序项目使用
+    //noinspection GradlePluginVersion
     id 'com.android.library' version "${ANDROID_GRADLE_PLUGIN}" apply false
     /**
      * ‘kotlin-android’ 插件是用于在 Android 项目中使用 Kotlin 编程语言的插件

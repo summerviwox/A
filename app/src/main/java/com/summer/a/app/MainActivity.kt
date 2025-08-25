@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentActivity
 import com.blankj.utilcode.util.LogUtils
 import com.summer.a.app.databinding.MainActivityBinding
 import com.summer.a.app.hook.PackageManagerHook
+import com.summer.a.lib.goTo
 import com.summer.a.provider.RouteAnno
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -21,7 +22,7 @@ class MainActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(mainActivityBinding.root)
-        mainActivityBinding.c.setOnClickListener {
+        mainActivityBinding.text.setOnClickListener {
             // ProviderManager.getProvider(LoginProvider::class.java)?.login(this,"CustomWebActivity","code")
             var packinfo =  packageManager.getPackageInfo("com.summer.a.app",0)
             LogUtils.e(packinfo?.packageName)
@@ -31,14 +32,11 @@ class MainActivity : FragmentActivity() {
 
         PackageManagerHook.hook(this)
 
-
-
     }
 
     fun ab(){
         GlobalScope.launch(Dispatchers.Unconfined) {
             println("Thread: ${Thread.currentThread().name}")
-            mainActivityBinding.c.setText("1212")
             println("Thread: ${Thread.currentThread().name}")
             repeat(100) {
                 var a = it * it

@@ -13,4 +13,8 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.Leanback" parent="@style/Theme.AppCompat.Leanback">
+        <item name="android:windowBackground">@color/color_000000</item>
+    </style>
 </resources>
