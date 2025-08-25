@@ -4,4 +4,5 @@ android {
 dependencies {
     implementation project(':lib')
     implementation project(':view')
+    kapt "com.alibaba:arouter-compiler:${AROUTER}"
 }
