@@ -1,6 +1,7 @@
 package com.summer.a.lib
 
 import android.app.Application
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 
 fun Libinit(application: Application){
@@ -12,4 +13,8 @@ fun Libinit(application: Application){
 
 fun goTo(path:String){
     ARouter.getInstance().build(path).navigation()
+}
+
+fun <T> navigation(service:Class<out T>):T{
+    return ARouter.getInstance().navigation(service)
 }

@@ -2,6 +2,8 @@ package com.summer.a.app.start
 
 import android.os.Bundle
 import com.summer.a.lib.goTo
+import com.summer.a.lib.navigation
+import com.summer.a.lib.provider.TVProvider
 import com.summer.a.view.activity.BaseUIActivity
 
 class StartActivity : BaseUIActivity() {
@@ -15,6 +17,7 @@ class StartActivity : BaseUIActivity() {
         setContentView(startView)
         //startActivity(Intent(this, MainActivity::class.java))
         //ProviderManager.getProvider(RouterProvider::class.java)?.intent(RouterPath._test_MainActivity)
+        navigation(TVProvider::class.java)
         goTo("/tv/main")
     }
 }

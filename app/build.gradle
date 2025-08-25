@@ -22,11 +22,13 @@ dependencies {
     implementation project(':view')
     implementation project(':login')
     implementation project(':web')
-    kapt 'com.google.auto.service:auto-service:1.1.1'
     kapt project(':provider')
     implementation project(':lib2')
     implementation 'com.squareup:javapoet:1.13.0'
     implementation project(":album")
     implementation project(':notes')
     implementation project(':tv')
+
+    kapt 'com.google.auto.service:auto-service:1.1.1'
+    kapt "com.alibaba:arouter-compiler:${AROUTER}"
 }
