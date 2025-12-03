@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SuperBookmarkState">
+    <option name="children">
+      <list>
+        <BookmarkPO>
+          <option name="children">
+            <list>
+              <BookmarkPO>
+                <option name="children">
+                  <list>
+                    <BookmarkPO>
+                      <option name="bookmark" value="true" />
+                      <option name="desc" value="" />
+                      <option name="line" value="16" />
+                      <option name="name" value="tv_view.xml android:descendantFocusability=&quot;afterDescendants&quot;" />
+                      <option name="uuid" value="fb17f7cb-714d-49e1-9acb-7bbf7755a3bc" />
+                      <option name="virtualFilePath" value="$PROJECT_DIR$/tv/src/main/res/layout/tv_view.xml" />
+                    </BookmarkPO>
+                    <BookmarkPO>
+                      <option name="bookmark" value="true" />
+                      <option name="desc" value="" />
+                      <option name="index" value="1" />
+                      <option name="line" value="15" />
+                      <option name="name" value="a_presenter.xml android:focusable=&quot;true&quot;" />
+                      <option name="uuid" value="36da0b5e-bbcf-46dd-b1dd-536c03090ac0" />
+                      <option name="virtualFilePath" value="$PROJECT_DIR$/tv/src/main/res/layout/a_presenter.xml" />
+                    </BookmarkPO>
+                  </list>
+                </option>
+                <option name="desc" value="" />
+                <option name="name" value="能够item切换优先获取焦点" />
+              </BookmarkPO>
+            </list>
+          </option>
+          <option name="desc" value="" />
+          <option name="name" value="VerticalGridView" />
+        </BookmarkPO>
+      </list>
+    </option>
+    <option name="name" value="A" />
+  </component>
+</project>

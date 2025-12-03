@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:background="@color/color_ffffff"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:background="@color/color_ffffff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <TextView
+            android:id="@+id/text1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_gravity="top"
+            android:background="@color/color_ff0000"
+            android:gravity="center"
+            android:text="11111111111111111111111"
+            android:textColor="#ffffff" />
+
+
+        <LinearLayout
+            android:layout_below="@+id/text1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text1"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_gravity="top"
+            android:background="@color/color_9172ec"
+            android:gravity="center"
+            android:text="222222222222222222222222222222222"
+            android:textColor="#ffffff" />
+
+
+        <TextView
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="-100dp"
+            android:layout_marginLeft="-50dp"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:layout_gravity="top"
+            android:background="@color/color_00ff00"
+            android:gravity="center"
+            android:text="333333333333333333333333333333"
+            android:textColor="#ffffff" />
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
