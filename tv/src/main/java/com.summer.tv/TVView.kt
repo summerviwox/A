@@ -66,6 +66,8 @@ class TVView(context: Context, attrs: AttributeSet? = null) : LifeConstraintLayo
         arrayObjectAdapter.add(CData())
         arrayObjectAdapter.add(CData())
 
+
+
         var unFocusView: View? = null
 //        var textView = TextView(context)
 //        textView.text = "111111111111111111111111"
@@ -113,15 +115,6 @@ class TVView(context: Context, attrs: AttributeSet? = null) : LifeConstraintLayo
 
         binding.gridview.setOnChildViewHolderSelectedListener(object:
             OnChildViewHolderSelectedListener(){
-            override fun onChildViewHolderSelectedAndPositioned(
-                parent: RecyclerView,
-                child: RecyclerView.ViewHolder?,
-                position: Int,
-                subposition: Int
-            ) {
-                super.onChildViewHolderSelectedAndPositioned(parent, child, position, subposition)
-                LogUtils.e(111111)
-            }
 
             override fun onChildViewHolderSelected(
                 parent: RecyclerView,
