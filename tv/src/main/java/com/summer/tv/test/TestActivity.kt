@@ -25,7 +25,11 @@ class TestActivity: BaseUIActivity() {
                 "MotionEvent.ACTION_MOVE:${MotionEvent.ACTION_MOVE}"+
                 "MotionEvent.ACTION_UP:${MotionEvent.ACTION_UP}"
         )
+        binding.btn.setOnClickListener {
+            Test.aaa()
+        }
     }
+
 
     @SuppressLint("RestrictedApi")
     override fun dispatchKeyEvent(event: KeyEvent?): Boolean {

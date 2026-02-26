@@ -26,4 +26,6 @@ dependencies {
     //https://github.com/alibaba/ARouter/blob/master/README_CN.md
     api "com.alibaba:arouter-api:${AROUTER}"
     kapt "com.alibaba:arouter-compiler:${AROUTER}"
+
+    api 'io.github.jeremyliao:live-event-bus-x:1.8.0'
 }

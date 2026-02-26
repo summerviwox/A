@@ -5,26 +5,12 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
     <Button
-        android:id="@+id/btn"
-        android:text="123"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:text="test"
+        android:id="@+id/test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-
-    <com.summer.tv.test.TestViewGroup
-        android:id="@+id/testviewgroup"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <com.summer.tv.test.TestView
-            android:id="@+id/testview"
-            android:focusable="true"
-            android:background="@color/color_4cc417"
-            android:layout_width="@dimen/sw_200dp"
-            android:layout_height="@dimen/sw_200dp"/>
-    </com.summer.tv.test.TestViewGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

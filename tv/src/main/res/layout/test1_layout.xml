@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:clipChildren="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="match_parent">
+
+<ScrollView
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:paddingTop="100dp">
+
+    <LinearLayout
+        android:paddingHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:background="@color/color_ffffff">
+
+        <!-- 透明占位区域，高度与头像重叠 -->
+        <View
+            android:translationY="-20dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/color_ffff00"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/color_ff0000"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/color_ff0000"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/color_ff0000"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/color_ff0000"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/color_ff0000"/>
+
+
+
+
+    </LinearLayout>
+</ScrollView>
+
+</FrameLayout>

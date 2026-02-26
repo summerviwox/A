@@ -5,5 +5,7 @@
 
     <application>
         <activity android:name="com.summer.tv.TVActivity"/>
+        <activity android:name="com.summer.tv.liveeventbus.LiveEventBusActivity"/>
+        <activity android:name="com.summer.tv.test.TestActivity"/>
     </application>
 </manifest>

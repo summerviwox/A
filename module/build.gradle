@@ -1,7 +1,9 @@
 android {
-    namespace 'com.summer.a.module'
+    namespace 'com.summer.module'
 }
 dependencies {
     implementation project(':lib')
     implementation project(':view')
+    implementation project(':album')
+    kapt "com.alibaba:arouter-compiler:${AROUTER}"
 }
